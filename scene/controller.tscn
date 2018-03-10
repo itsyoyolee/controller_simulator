@@ -1,19 +1,30 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Script/controller.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://scene/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://scene/button.tscn" type="PackedScene" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 29.4019, 30.6161 )
 
 [node name="Node2D" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="RigidBody2D" type="RigidBody2D" parent="." index="0"]
+[node name="player" parent="." index="0" instance=ExtResource( 2 )]
+
+position = Vector2( 11.8584, 0.527031 )
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." index="1"]
 
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
-mode = 0
+mode = 1
 mass = 1.0
 friction = 1.0
 bounce = 0.0
@@ -29,12 +40,26 @@ linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" index="0"]
+[node name="Sprite" type="Sprite" parent="RigidBody2D" index="0"]
 
-[node name="Sprite" type="Sprite" parent="RigidBody2D" index="1"]
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
 
-position = Vector2( 82.8034, 82.8034 )
-scale = Vector2( 3.58761, 3.58761 )
-texture = ExtResource( 2 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" index="1"]
+
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="button" parent="RigidBody2D" index="2" instance=ExtResource( 4 )]
+
+editor/display_folded = true
+position = Vector2( 67.0225, -45.3317 )
 
 
+[editable path="RigidBody2D/button"]

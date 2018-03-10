@@ -11,7 +11,7 @@ radius = 10.0
 [node name="button" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
-buttonType = "int"
+buttonType = "normal"
 
 [node name="anim" type="Sprite" parent="." index="0"]
 

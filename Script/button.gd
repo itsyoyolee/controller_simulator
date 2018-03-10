@@ -1,9 +1,9 @@
 extends Node2D
 
-# class member variables go here, for example:
+# class member variables go here, for example: 
 # var a = 2
 # var b = "textvar"
-export var buttonType = "int"
+export var buttonType = "normal"
 var timer = 0
 var enable = true
 var dir = "" #L R U D
@@ -14,9 +14,10 @@ func _ready():
 	pass
 
 func _process(delta):
-	pressDetect()
+	
 	#是否被人類按下去 開始計時&特效
 	if(enable):
+		pressDetect()
 		timer += 1
 		$Sprite.offset.y = 10
 		$anim.scale *= Vector2(1.1, 1.1)
@@ -30,11 +31,11 @@ func _process(delta):
 
 func pressDetect(): #是否被小精靈推回去
 	if(buttonType == "normal"):
-		if($area.overlaps_body(get_node("../player/body"))):
-			if(Input.is_action_pressed("ui_select")):
+		if($area.overlaps_body(get_node("../../player/body"))):
+			if(Input.is_action_just_pressed("ui_select")):
 				enable = false
 	elif(buttonType == "mushroom"):
-		if($area.overlaps_body(get_node("../player/body"))):
+		if($area.overlaps_body(get_node("../../player/body"))):
 			if(get_node("../player").catch(dir)):
 				enable = false
 	pass
