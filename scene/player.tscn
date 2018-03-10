@@ -1,25 +1,18 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Script/player.gd" type="Script" id=1]
-[ext_resource path="res://Img/littleGuyWalk.png" type="Texture" id=2]
+[ext_resource path="res://Img/littleGuy.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 
 resource_name = "air"
-length = 1.0
+length = 0.1
 loop = true
-step = 0.1
-
-[sub_resource type="Animation" id=5]
-
-resource_name = "idle"
-length = 1.0
-loop = false
 step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -31,19 +24,68 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 1 ]
+"values": [ 9 ]
+}
+
+[sub_resource type="Animation" id=6]
+
+resource_name = "attack"
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 10, 11, 12, 13, 14 ]
+}
+
+[sub_resource type="Animation" id=3]
+
+resource_name = "idle"
+length = 0.4
+loop = true
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 6, 7 ]
 }
 
 [sub_resource type="Animation" id=4]
 
 resource_name = "jump"
-length = 1.0
-loop = false
+length = 0.4
+loop = true
 step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 6, 7, 8, 9 ]
+}
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=5]
 
-resource_name = "walk"
 length = 0.6
 loop = true
 step = 0.1
@@ -82,9 +124,9 @@ shape = SubResource( 1 )
 [node name="Sprite" type="Sprite" parent="body" index="1"]
 
 texture = ExtResource( 2 )
-hframes = 6
-frame = 1
-_sections_unfolded = [ "Animation" ]
+hframes = 15
+frame = 6
+_sections_unfolded = [ "Animation", "Region" ]
 
 [node name="Anim" type="AnimationPlayer" parent="body" index="2"]
 
@@ -93,10 +135,11 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/air = SubResource( 3 )
-anims/idle = SubResource( 5 )
+anims/air = SubResource( 2 )
+anims/attack = SubResource( 6 )
+anims/idle = SubResource( 3 )
 anims/jump = SubResource( 4 )
-anims/walk = SubResource( 2 )
+anims/walk = SubResource( 5 )
 next/jump = "air"
 blend_times = [  ]
 

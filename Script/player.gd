@@ -11,6 +11,9 @@ var linear_vel = Vector2()
 var onair_time = 0 #
 var on_floor = false
 var anim
+var new_anim = "idle"
+var attack = false
+var attacktime = 0
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
@@ -59,14 +62,13 @@ func Catch(var dir):
 	if(Input.is_action_pressed("ui_select")):
 		if(Input.is_action_pressed(dir)):
 			return true
-			print("878")
 		else:
 			return false	
 	pass
 	
 func Anim(var delta):
-	var new_anim = "idle"
-
+	
+	new_anim = "idle"
 	if on_floor:
 		if linear_vel.x < -SIDING_CHANGE_SPEED:
 			$body/Sprite.scale.x = 1
@@ -76,18 +78,30 @@ func Anim(var delta):
 			$body/Sprite.scale.x = -1
 			new_anim = "walk"
 	else:
-		# We want the character to immediately change facing side when the player
-		# tries to change direction, during air control.
-		# This allows for example the player to shoot quickly left then right.
 		if Input.is_action_pressed("ui_left") and not Input.is_action_pressed("ui_right"):
 			$body/Sprite.scale.x = 1
 		if Input.is_action_pressed("ui_right") and not Input.is_action_pressed("ui_left"):
 			$body/Sprite.scale.x = -1
 
-		if linear_vel.y < 0:
+		if linear_vel.y != 0:
 			new_anim = "jump"
 		else:
 			new_anim = "walk"
+	if Input.is_action_just_pressed("ui_select") and attacktime < 1 :
+		attack = true
+	if(attack):
+		new_anim = "attack"
+		attacktime += delta
+		if(attacktime >= $body/Anim.get_animation("attack").length):
+			attack = false
+			attacktime = 0
+	print(new_anim)
 	if new_anim != anim:
 		anim = new_anim
 		$body/Anim.play(anim)
+
+func _on_Anim_animation_finished(anim_name):
+	if(anim_name == "attack"):
+		attack = false
+		attacktime = 0
+	pass # replace with function body
