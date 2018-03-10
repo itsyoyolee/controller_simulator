@@ -20,7 +20,7 @@ func _process(delta):
 		timer += 1
 		$Sprite.offset.y = 10
 		$anim.scale *= Vector2(1.1, 1.1)
-		$anim.modulate.a *=0.8
+		$anim.modulate.a *=0.85
 	else:
 		$Sprite.offset.y = 0
 		timer = 0
