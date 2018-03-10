@@ -1,19 +1,29 @@
 extends Node2D
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
+var dir
+var isShake=false
+var jitterTime
+var originPos
 
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
 	pass
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+func _process(delta):
+	if(isShake):
+		Jitter()
+	pass
 
-func Shake():
+func Shake(var time):
+	isShake=true
+	jitterTime=time
+	originPos=$".".global_position
+	pass
+	
+func Jitter():
+	jitterTime-=get_process_delta_time()
+	global_position=originPos+Vector2(rand_range(1,5),rand_range(1,5))
+	if(jitterTime<=0):
+		global_position=originPos
+		isShake=false
 	pass
 	
