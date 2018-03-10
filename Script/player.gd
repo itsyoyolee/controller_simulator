@@ -15,6 +15,7 @@ func _ready():
 #	pass
 
 func Move():
+	
 	pass
 	
 func Catch():
