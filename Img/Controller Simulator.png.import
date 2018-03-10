@@ -2,14 +2,14 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Controller Simulator.png-77d77a7265e592be16686c4fbe52faf7.stex"
+path="res://.import/Controller Simulator.png-a9c6de07ca504fb1a328eb416a0bc0c2.stex"
 
 [deps]
 
-source_file="res://Controller Simulator.png"
+source_file="res://Img/Controller Simulator.png"
 source_md5="a7b86f239d9d4116298e8c7ad97a23c4"
 
-dest_files=[ "res://.import/Controller Simulator.png-77d77a7265e592be16686c4fbe52faf7.stex" ]
+dest_files=[ "res://.import/Controller Simulator.png-a9c6de07ca504fb1a328eb416a0bc0c2.stex" ]
 dest_md5="ae46b109d643de6cd8882f2bdf86fd18"
 
 [params]
