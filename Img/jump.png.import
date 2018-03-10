@@ -10,7 +10,7 @@ source_file="res://Img/jump.png"
 source_md5="6230e26195ad2b2e236c2e321ae5b809"
 
 dest_files=[ "res://.import/jump.png-6579a0779ec42d9f5679a69da825ef3f.stex" ]
-dest_md5="beca8c430e12af33c5835ca0f633391a"
+dest_md5="eae2d6e3519608906ff611d58d319d21"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
