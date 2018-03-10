@@ -21,6 +21,7 @@ func Move():
 		move_and_slide(Vector2(0,1)*SPEED)
 	pass
 	
+#得到 蘑菇頭的方向 並判斷使用者的輸入 並回傳結果
 func Catch(var dir):
 	if(Input.is_action_pressed("ui_select")):
 		if(Input.is_action_pressed(dir)):
