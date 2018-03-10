@@ -4,7 +4,7 @@ var gameMode
 var endPoint
 
 func _ready():
-	gameMode=[1,2,3,4]
+	gameMode=[1,2,3,4,6,7,8,9]
 	endPoint=50.0
 	pass
 

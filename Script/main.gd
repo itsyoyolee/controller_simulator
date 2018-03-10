@@ -43,9 +43,13 @@ func Btn_Decide(delta):
 	if (input_pass <=0):
 		randomize()
 		var input_btn = playing_game.gameMode[randi()%playing_game.gameMode.size()]#抓kind
-		if (input_btn.enable): pass
-		else:
-			input_btn.EnableButton()
+		
+		if !(button_list[input_btn].enable):
+			if(button_list[input_btn].buttonType == "mushroom"):
+				randomize()
+				button_list[input_btn].EnableButton(randi()%4)
+			else:
+				button_list[input_btn].EnableButton(0)
 			input_pass = INPUT_OFFSET - ((randi()%29)/10)
 	else: input_pass -= delta
 	pass
@@ -64,5 +68,5 @@ func Game_Over():
 func Init_Btn():
 	print("INIT")
 	for index in Button_Num:
-		button_list.append(get_node("button"+str(index)))
+		button_list.append(get_node("Controller").get_node(str(index)))
 	pass

@@ -7,10 +7,10 @@ path="res://.import/littleGuyWalk.png-2f96ca438cdb328a20098589f13e097c.stex"
 [deps]
 
 source_file="res://Img/littleGuyWalk.png"
-source_md5="47410cf6dc75d9c911bfc9363067d7be"
+source_md5="c87f8e5d582d4d923b7238ab852bce77"
 
 dest_files=[ "res://.import/littleGuyWalk.png-2f96ca438cdb328a20098589f13e097c.stex" ]
-dest_md5="58bc016cc70ffb465600983eed6bef7a"
+dest_md5="acce0ecf4e5e139c9adf7916682bfc5a"
 
 [params]
 

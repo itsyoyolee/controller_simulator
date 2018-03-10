@@ -6,7 +6,6 @@ var preGame
 
 func _ready():
 	for index in get_child_count() :
-		print(index)
 		gameList.append(get_node("Game"+str(index)))
 	playingGame=gameList[rand_range(0,gameList.size())]
 	preGame=playingGame

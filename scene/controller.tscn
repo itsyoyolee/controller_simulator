@@ -24,56 +24,56 @@ scale = Vector2( 2.05616, 2.05616 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="left" parent="." index="1" instance=ExtResource( 3 )]
-
-position = Vector2( 245.101, 324.76 )
-scale = Vector2( 2.34775, 1.07274 )
-
-[node name="right" parent="." index="2" instance=ExtResource( 3 )]
-
-position = Vector2( 323.384, 326.75 )
-scale = Vector2( 2.34775, 1.07274 )
-
-[node name="upJoy" parent="." index="3" instance=ExtResource( 3 )]
+[node name="0" parent="." index="1" instance=ExtResource( 3 )]
 
 position = Vector2( 217.975, 204.236 )
 scale = Vector2( 2.91256, 2.91256 )
 buttonType = "mushroom"
 
-[node name="lowJoy" parent="." index="4" instance=ExtResource( 3 )]
+[node name="1" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 245.101, 324.76 )
+scale = Vector2( 2.34775, 1.07274 )
+
+[node name="2" parent="." index="3" instance=ExtResource( 3 )]
+
+position = Vector2( 287.228, 281.144 )
+scale = Vector2( 1.19713, 2.13538 )
+
+[node name="3" parent="." index="4" instance=ExtResource( 3 )]
+
+position = Vector2( 323.384, 326.75 )
+scale = Vector2( 2.34775, 1.07274 )
+
+[node name="4" parent="." index="5" instance=ExtResource( 3 )]
+
+position = Vector2( 286.564, 365.399 )
+scale = Vector2( 1.19713, 2.13538 )
+
+[node name="5" parent="." index="6" instance=ExtResource( 3 )]
 
 position = Vector2( 466.094, 350.188 )
 scale = Vector2( 2.91256, 2.91256 )
 buttonType = "mushroom"
 
-[node name="up" parent="." index="5" instance=ExtResource( 3 )]
+[node name="6" parent="." index="7" instance=ExtResource( 3 )]
 
-position = Vector2( 287.228, 281.144 )
-scale = Vector2( 1.19713, 2.13538 )
-
-[node name="down" parent="." index="6" instance=ExtResource( 3 )]
-
-position = Vector2( 286.564, 365.399 )
-scale = Vector2( 1.19713, 2.13538 )
-
-[node name="upA4" parent="." index="7" instance=ExtResource( 3 )]
-
-position = Vector2( 560.719, 279.647 )
+position = Vector2( 509.635, 230.554 )
 scale = Vector2( 2.47746, 2.44104 )
 
-[node name="upA2" parent="." index="8" instance=ExtResource( 3 )]
+[node name="7" parent="." index="8" instance=ExtResource( 3 )]
 
 position = Vector2( 565.363, 176.817 )
 scale = Vector2( 2.47746, 2.44104 )
 
-[node name="upA3" parent="." index="9" instance=ExtResource( 3 )]
+[node name="8" parent="." index="9" instance=ExtResource( 3 )]
 
 position = Vector2( 618.436, 233.208 )
 scale = Vector2( 2.47746, 2.44104 )
 
-[node name="upA" parent="." index="10" instance=ExtResource( 3 )]
+[node name="9" parent="." index="10" instance=ExtResource( 3 )]
 
-position = Vector2( 509.635, 230.554 )
+position = Vector2( 560.719, 279.647 )
 scale = Vector2( 2.47746, 2.44104 )
 
 [node name="RigidBody2D" type="RigidBody2D" parent="." index="11"]
@@ -122,6 +122,5 @@ __meta__ = {
 [node name="player" parent="." index="12" instance=ExtResource( 5 )]
 
 position = Vector2( 346.484, 370.61 )
-scale = Vector2( 1, 1 )
 
 
