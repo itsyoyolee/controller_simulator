@@ -23,7 +23,6 @@ func _process(delta):
 		if (survive_time >= 0):# 計算存活
 			survive_time -= delta
 		else:# COMPLETE !
-			print("WIN!")
 			playing_game = get_node("Game").ChooseGame(true)
 			fail_time = playing_game.endPoint
 			survive_time = fail_time
@@ -33,7 +32,6 @@ func _process(delta):
 			#如果按鈕沒點擊count fail_time
 			Btn_Update(delta)
 		else:# GAME CHANGE!
-			print("CHANGE!")
 			playing_game = get_node("Game").ChooseGame(false)
 			fail_time = playing_game.endPoint
 			survive_time = fail_time
