@@ -62,7 +62,11 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
+<<<<<<< HEAD
 "values": [ 6, 7 ]
+=======
+"values": [ 1 ]
+>>>>>>> 17dd4a8d66fc1e24d37a1b71534ebadb9cfc5289
 }
 
 [sub_resource type="Animation" id=4]
@@ -124,9 +128,15 @@ shape = SubResource( 1 )
 [node name="Sprite" type="Sprite" parent="body" index="1"]
 
 texture = ExtResource( 2 )
+<<<<<<< HEAD
 hframes = 15
 frame = 6
 _sections_unfolded = [ "Animation", "Region" ]
+=======
+hframes = 6
+frame = 1
+_sections_unfolded = [ "Animation" ]
+>>>>>>> 17dd4a8d66fc1e24d37a1b71534ebadb9cfc5289
 
 [node name="Anim" type="AnimationPlayer" parent="body" index="2"]
 

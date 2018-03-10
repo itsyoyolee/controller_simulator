@@ -6,7 +6,7 @@ extends Node2D
 export var buttonType = "normal"
 var timer = 0
 var enable = false
-var dir
+var dir = 0
 var dirString=["ui_left","ui_up","ui_right","ui_down"]
 
 func _ready():
@@ -36,14 +36,14 @@ func pressDetect(): #是否被小精靈推回去
 			if(Input.is_action_just_pressed("ui_select")):
 				enable = false
 	elif(buttonType == "mushroom"):
-		if($area.overlaps_body(get_node("../player/body"))):
-			dir=int(name)%4
-			if(get_node("../player").Catch(dirString[dir])):
+		if($area.overlaps_body(get_node("../player/body"))):	
+			var temp = get_node("../player").Catch(dirString[dir])
+			if(temp):
 				enable = false
 	pass
 
-func EnableButton(dir): #被人類按下按鍵
-	dir = dir
+func EnableButton(tdir): #被人類按下按鍵
+	dir = tdir
 	enable = true
 	pass
 
