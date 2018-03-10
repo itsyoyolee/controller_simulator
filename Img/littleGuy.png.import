@@ -10,7 +10,7 @@ source_file="res://Img/littleGuy.png"
 source_md5="2d95819c19d675eeb7bd7f33c58cee0e"
 
 dest_files=[ "res://.import/littleGuy.png-6684121e620f8e6dae5cb52d209b9365.stex" ]
-dest_md5="c12f0ad731d5ffc720687aac21879df9"
+dest_md5="e332a497646d230567b76cacb65e7491"
 
 [params]
 
@@ -23,7 +23,7 @@ flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
-process/fix_alpha_border=true
+process/fix_alpha_border=false
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
