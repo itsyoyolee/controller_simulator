@@ -11,7 +11,12 @@ config_version=3
 [application]
 
 config/name="controller_simulator"
+run/main_scene="res://scene/main.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/fullscreen=true
 
 [input]
 
