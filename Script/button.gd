@@ -34,6 +34,7 @@ func pressDetect(): #是否被小精靈推回去
 		if($area.overlaps_body(get_node("../../player/body"))):
 			if(Input.is_action_just_pressed("ui_select")):
 				enable = false
+				print("hi")
 	elif(buttonType == "mushroom"):
 		if($area.overlaps_body(get_node("../../player/body"))):
 			if(get_node("../player").catch(dir)):
