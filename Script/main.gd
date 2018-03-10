@@ -12,7 +12,7 @@ var Button_Num = 10			#按鍵總數
 var survive_time 			#存活時間
 
 func _ready():
-	playing_game = get_node("Game").Init()
+	playing_game = get_node("Game").ChooseGame(false)
 	Init_Btn()
 	fail_time = playing_game.endPoint
 	survive_time = playing_game.endPoint
@@ -42,8 +42,9 @@ func _process(delta):
 func Btn_Decide(delta):
 	if (input_pass <=0):
 		randomize()
-		var input_btn = get_node("playing_game").btn_list[randi()%get_node("playing_game").btn_list.size()]#抓kind
-		if ! input_btn.enable:
+		var input_btn = playing_game.gameMode[randi()%playing_game.gameMode.size()]#抓kind
+		if (input_btn.enable): pass
+		else:
 			input_btn.EnableButton()
 			input_pass = INPUT_OFFSET - ((randi()%29)/10)
 	else: input_pass -= delta

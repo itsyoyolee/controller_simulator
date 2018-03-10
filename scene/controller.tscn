@@ -1,26 +1,86 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Script/controller.gd" type="Script" id=1]
-[ext_resource path="res://scene/player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://icon.png" type="Texture" id=3]
-[ext_resource path="res://scene/button.tscn" type="PackedScene" id=4]
+[ext_resource path="res://preview.png" type="Texture" id=2]
+[ext_resource path="res://scene/button.tscn" type="PackedScene" id=3]
+[ext_resource path="res://icon.png" type="Texture" id=4]
+[ext_resource path="res://scene/player.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 29.4019, 30.6161 )
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="player" parent="." index="0" instance=ExtResource( 2 )]
+[node name="preview" type="Sprite" parent="." index="0"]
 
-position = Vector2( 11.8584, 0.527031 )
+self_modulate = Color( 1, 1, 1, 0.436471 )
+position = Vector2( 526.914, 296.298 )
+scale = Vector2( 2.05616, 2.05616 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Visibility" ]
 
-[node name="RigidBody2D" type="RigidBody2D" parent="." index="1"]
+[node name="left" parent="." index="1" instance=ExtResource( 3 )]
 
+position = Vector2( 245.101, 324.76 )
+scale = Vector2( 2.34775, 1.07274 )
+
+[node name="right" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 323.384, 326.75 )
+scale = Vector2( 2.34775, 1.07274 )
+
+[node name="upJoy" parent="." index="3" instance=ExtResource( 3 )]
+
+position = Vector2( 217.975, 204.236 )
+scale = Vector2( 2.91256, 2.91256 )
+buttonType = "mushroom"
+
+[node name="lowJoy" parent="." index="4" instance=ExtResource( 3 )]
+
+position = Vector2( 466.094, 350.188 )
+scale = Vector2( 2.91256, 2.91256 )
+buttonType = "mushroom"
+
+[node name="up" parent="." index="5" instance=ExtResource( 3 )]
+
+position = Vector2( 287.228, 281.144 )
+scale = Vector2( 1.19713, 2.13538 )
+
+[node name="down" parent="." index="6" instance=ExtResource( 3 )]
+
+position = Vector2( 286.564, 365.399 )
+scale = Vector2( 1.19713, 2.13538 )
+
+[node name="upA4" parent="." index="7" instance=ExtResource( 3 )]
+
+position = Vector2( 560.719, 279.647 )
+scale = Vector2( 2.47746, 2.44104 )
+
+[node name="upA2" parent="." index="8" instance=ExtResource( 3 )]
+
+position = Vector2( 565.363, 176.817 )
+scale = Vector2( 2.47746, 2.44104 )
+
+[node name="upA3" parent="." index="9" instance=ExtResource( 3 )]
+
+position = Vector2( 618.436, 233.208 )
+scale = Vector2( 2.47746, 2.44104 )
+
+[node name="upA" parent="." index="10" instance=ExtResource( 3 )]
+
+position = Vector2( 509.635, 230.554 )
+scale = Vector2( 2.47746, 2.44104 )
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." index="11"]
+
+editor/display_folded = true
+position = Vector2( 416.979, 418.767 )
+scale = Vector2( 8.62894, 0.328947 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -42,24 +102,26 @@ angular_damp = -1.0
 
 [node name="Sprite" type="Sprite" parent="RigidBody2D" index="0"]
 
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" index="1"]
 
+position = Vector2( 0, -1.10803 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
-[node name="button" parent="RigidBody2D" index="2" instance=ExtResource( 4 )]
+[node name="player" parent="." index="12" instance=ExtResource( 5 )]
 
-editor/display_folded = true
-position = Vector2( 67.0225, -45.3317 )
+position = Vector2( 346.484, 370.61 )
+scale = Vector2( 1, 1 )
 
 
-[editable path="RigidBody2D/button"]
