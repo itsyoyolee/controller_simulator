@@ -37,13 +37,15 @@ func pressDetect(): #是否被小精靈推回去
 				enable = false
 	elif(buttonType == "mushroom"):
 		if($area.overlaps_body(get_node("../player/body"))):	
-			if(get_node("../player").Catch(dirString[dir])):
+			var temp = get_node("../player").Catch(dirString[dir])
+			print(dirString[dir])
+			if(temp):
 				enable = false
 	pass
 
-func EnableButton(dir): #被人類按下按鍵
+func EnableButton(tdir): #被人類按下按鍵
 	print("hi"+str(dir))
-	dir = dir
+	dir = tdir
 	enable = true
 	pass
 

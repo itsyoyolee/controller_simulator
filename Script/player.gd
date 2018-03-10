@@ -58,7 +58,6 @@ func Catch(var dir):
 	if(Input.is_action_pressed("ui_select")):
 		if(Input.is_action_pressed(dir)):
 			return true
-			print("878")
 		else:
 			return false	
 	pass
