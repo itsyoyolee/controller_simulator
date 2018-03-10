@@ -83,7 +83,7 @@ shape = SubResource( 1 )
 
 texture = ExtResource( 2 )
 hframes = 6
-frame = 2
+frame = 1
 _sections_unfolded = [ "Animation" ]
 
 [node name="Anim" type="AnimationPlayer" parent="body" index="2"]
