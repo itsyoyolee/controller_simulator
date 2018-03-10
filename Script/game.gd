@@ -1,15 +1,22 @@
 extends Node2D
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
-
+var gameList
+var playingGame
+var preGame
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
+	for index in get_child_count() :
+		gameList.append(Game())
+	playingGame=gameList[rand_range(0,gameList.size)]
+	preGame=playingGame
 	pass
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+
+func ChooseGame(var isSuccessful):
+	if(isSuccessful):
+		playingGame.Update()
+	preGame=playingGame
+	playingGame = gameList[rand_range(0,gameList.size)]
+	while preGame==playingGame:
+		playingGame = gameList[rand_range(0,gameList.size)]
+	return playingGame
+	pass

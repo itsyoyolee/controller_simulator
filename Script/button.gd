@@ -7,6 +7,7 @@ export var buttonType = "normal"
 var timer = 0
 var enable = true
 var dir = "" #L R U D
+var dirString=["ui_left","ui_up","ui_right","ui_down"]
 
 func _ready():
 	# Called every time the node is added to the scene.
@@ -36,7 +37,8 @@ func pressDetect(): #是否被小精靈推回去
 				enable = false
 	elif(buttonType == "mushroom"):
 		if($area.overlaps_body(get_node("../../player/body"))):
-			if(get_node("../player").catch(dir)):
+			dir=int(name)%4
+			if(get_node("../../player").catch(dirString[dir])):
 				enable = false
 	pass
 
