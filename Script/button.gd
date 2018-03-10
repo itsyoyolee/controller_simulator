@@ -8,7 +8,8 @@ var timer = 0
 var enable = false
 var dir = 0
 var dirString=["ui_left","ui_up","ui_right","ui_down"]
-
+var delayTimer = 0
+var delay = false
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
@@ -21,13 +22,19 @@ func _process(delta):
 		pressDetect()
 		timer += 1
 		$Sprite.offset.y = 10
+		$anim.offset.y = 0
 		$anim.scale *= Vector2(1.1, 1.1)
 		$anim.modulate.a *=0.8
+		delayTimer = 0
 	else:
-		$Sprite.offset.y = 0
+		delayTimer += 1
+		if(delayTimer > 30):
+			$Sprite.offset.y = 0
+			$anim.offset.y = 0
+			$anim.modulate.a = 1
 		timer = 0
 		$anim.scale = Vector2(1, 1)
-		$anim.modulate.a = 1
+		
 	pass
 
 func pressDetect(): #是否被小精靈推回去
@@ -35,6 +42,7 @@ func pressDetect(): #是否被小精靈推回去
 		if($area.overlaps_body(get_node("../player/body"))):
 			if(Input.is_action_just_pressed("ui_select")):
 				enable = false
+				
 	elif(buttonType == "mushroom"):
 		if($area.overlaps_body(get_node("../player/body"))):	
 			var temp = get_node("../player").Catch(dirString[dir])
