@@ -3,14 +3,14 @@ var INPUT_OFFSET = 3		#下次點擊的時間間隔
 var input_pass				#上次點擊後經過時間
 var button_list = []		#button列表
 var controller 				#場景ref
-var game_list = []			#遊戲列表
 var playing_game			#正在遊玩的遊戲
 var controller_health = 100	#玩家總血量
-var REACT_TIME = 5			#單一按鍵失敗時間判定
-var fail_time 			#反應總時間
+var REACT_TIME = 1			#單一按鍵失敗時間判定
+var fail_time 				#反應總時間
 var score = 0				#分數(存活時間相關)
 
 func _ready():
+	playing_game = get_node("Game").Init()
 	Init_Btn()
 	fail_time = playing_game.endPoint
 	pass
@@ -24,7 +24,7 @@ func _process(delta):
 			Btn_Update(delta)
 			pass
 		else:
-			Game_Change()
+			playing_game = get_node("Game").Change()
 			fail_time = playing_game.endPoint
 	else:
 		Game_Over()
@@ -39,13 +39,18 @@ func Btn_Decide(delta):
 			input_pass = INPUT_OFFSET - ((randi()%29)/10)
 	else: input_pass -= delta
 	pass
+
 func Btn_Update(delta):
 	for index in button_list:
-		if button_list[index].enable == 1:
-			fail_time -= delta
+		if (button_list[index].enable == 1):
+			if (button_list[index].time - REACT_TIME > 0):
+				fail_time -= delta
 	pass
-func Game_Change():
 
-	pass
 func Game_Over():
+	pass
+
+func Init_Btn():
+	for index in 10:
+		button_list[index] = get_node("Button"+str(index))
 	pass
