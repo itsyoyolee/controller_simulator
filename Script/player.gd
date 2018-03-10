@@ -4,7 +4,7 @@ const FLOOR_NORMAL = Vector2(0, -1)
 const SLOPE_SLIDE_STOP = 0.0
 const MIN_ONAIR_TIME = 0.1
 const WALK_SPEED = 200 # pixels/sec
-const JUMP_SPEED = 300
+const JUMP_SPEED = 400
 const SIDING_CHANGE_SPEED = 10
 
 var linear_vel = Vector2()
@@ -22,6 +22,7 @@ func _ready():
 func _process(delta):
 	Move(delta)
 	Anim(delta)
+	print (linear_vel.y)
 	pass
 
 func Move(var delta):
@@ -54,6 +55,7 @@ func Move(var delta):
 	# Jumping
 	if on_floor and Input.is_action_just_pressed("ui_up"):
 		linear_vel.y = -JUMP_SPEED
+		new_anim = "jump"
 	pass
 	
 #得到 蘑菇頭的方向 並判斷使用者的輸入 並回傳結果
@@ -85,7 +87,7 @@ func Anim(var delta):
 		if linear_vel.y != 0:
 			new_anim = "jump"
 		else:
-			new_anim = "walk"
+			new_anim = "idle"
 	if Input.is_action_just_pressed("ui_select") and attacktime < 1 :
 		attack = true
 	if(attack):
@@ -94,13 +96,7 @@ func Anim(var delta):
 		if(attacktime >= $body/Anim.get_animation("attack").length):
 			attack = false
 			attacktime = 0
-	print(new_anim)
 	if new_anim != anim:
 		anim = new_anim
 		$body/Anim.play(anim)
 
-func _on_Anim_animation_finished(anim_name):
-	if(anim_name == "attack"):
-		attack = false
-		attacktime = 0
-	pass # replace with function body
