@@ -26,6 +26,7 @@ func _process(delta):
 			print("WIN!")
 			playing_game = get_node("Game").ChooseGame(true)
 			fail_time = playing_game.endPoint
+			survive_time = fail_time
 		if (fail_time >= 0):# 按鍵設定及判定
 			#決定隨機點擊
 			Btn_Decide(delta)
@@ -35,6 +36,7 @@ func _process(delta):
 			print("CHANGE!")
 			playing_game = get_node("Game").ChooseGame(false)
 			fail_time = playing_game.endPoint
+			survive_time = fail_time
 	else:
 		Game_Over()
 	pass

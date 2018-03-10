@@ -7,10 +7,24 @@ path="res://.import/littleGuyWalk.png-2f96ca438cdb328a20098589f13e097c.stex"
 [deps]
 
 source_file="res://Img/littleGuyWalk.png"
+<<<<<<< HEAD
 source_md5="c87f8e5d582d4d923b7238ab852bce77"
 
 dest_files=[ "res://.import/littleGuyWalk.png-2f96ca438cdb328a20098589f13e097c.stex" ]
 dest_md5="68c0fe413d5c3d55f77ae306b19b7258"
+=======
+<<<<<<< HEAD
+source_md5="d266c158773ec94816ad883f5e02c7d8"
+
+dest_files=[ "res://.import/littleGuyWalk.png-2f96ca438cdb328a20098589f13e097c.stex" ]
+dest_md5="72903ad172d41f2b61ab0621dda562a9"
+=======
+source_md5="c87f8e5d582d4d923b7238ab852bce77"
+
+dest_files=[ "res://.import/littleGuyWalk.png-2f96ca438cdb328a20098589f13e097c.stex" ]
+dest_md5="acce0ecf4e5e139c9adf7916682bfc5a"
+>>>>>>> d767f9c5f04845fe09196820256f966c5f549524
+>>>>>>> 1ce4e787bd4532e2004f30e162e3dc724dd1fdac
 
 [params]
 
@@ -19,7 +33,11 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
+<<<<<<< HEAD
 flags/filter=true
+=======
+flags/filter=false
+>>>>>>> d767f9c5f04845fe09196820256f966c5f549524
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
