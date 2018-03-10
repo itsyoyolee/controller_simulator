@@ -1,6 +1,6 @@
 extends Node2D
 const SPEED=1.0
-const DIR_LIST=['U','D','R','L']
+
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
