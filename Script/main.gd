@@ -71,6 +71,10 @@ func Btn_Update(delta):
 func Game_Over():
 	print(score)
 	print("OVER")
+	global.score = score
+	var world = load("res://scene/Ending.tscn").instance()
+	get_tree().get_root().add_child(world)
+	if(get_tree().get_root().get_node("main")):get_tree().get_root().get_node("main").queue_free()
 	pass
 
 func Init_Btn():

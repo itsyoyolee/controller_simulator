@@ -14,9 +14,9 @@ config/name="controller_simulator"
 run/main_scene="res://scene/main.tscn"
 config/icon="res://icon.png"
 
-[display]
+[autoload]
 
-window/size/height=596
+global="*res://Script/global.gd"
 
 [input]
 
