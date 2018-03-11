@@ -21,6 +21,7 @@ func _ready():
 
 func _process(delta):
 	if (controller_health >= 0):
+		score+=delta
 		if (survive_time >= 0):# 計算存活
 			survive_time -= delta
 		else:# COMPLETE !
@@ -66,6 +67,7 @@ func Btn_Update(delta):
 	pass
 
 func Game_Over():
+	print(score)
 	print("OVER")
 	pass
 
