@@ -11,7 +11,7 @@ var score = 0				#分數(存活時間相關)
 var Button_Num = 10			#按鍵總數
 var survive_time 			#存活時間
 var music
-
+var v = 1
 
 func _ready():
 	playing_game = get_node("Game").ChooseGame(false)
@@ -38,6 +38,7 @@ func _process(delta):
 			survive_time -= delta
 		else:# COMPLETE !
 			playing_game = get_node("Game").ChooseGame(true)
+			get_node("HUD2").play("NB")
 			playing_game.get_node("../Anim").play(playing_game.anim)
 			fail_time = playing_game.endPoint
 			survive_time = fail_time
@@ -48,6 +49,11 @@ func _process(delta):
 			Btn_Update(delta)
 		else:# GAME CHANGE!
 			controller_health -= 50
+			v+=1
+			print(v)
+			if v < 4: get_node("Controller").get_node("preview").texture = load("res://Img/background_final2-"+str(v)+".png")
+			get_node("HUD").play("Shake")
+			get_node("HUD2").play("CNS")
 			playing_game = get_node("Game").ChooseGame(false)
 			$Anim.play("handBreak")
 			fail_time = playing_game.endPoint
@@ -80,12 +86,10 @@ func Btn_Update(delta):
 	pass
 
 func Game_Over():
-	print(score)
-	print("OVER")
-	global.score = score
-	var world = load("res://scene/Ending.tscn").instance()
-	get_tree().get_root().add_child(world)
-	if(get_tree().get_root().get_node("main")):get_tree().get_root().get_node("main").queue_free()
+	if v <= 4:
+		get_node("HUD").play("Shake")
+		$Anim.play("handBreak")
+		global.score = score
 	pass
 
 func Init_Btn():
@@ -97,3 +101,11 @@ func playMusic():
 	$audio.stream = music
 	$audio.playing = true
 	pass
+
+
+func _on_HUD_animation_finished(anim_name):
+	if(anim_name == "Shake") and v >= 4:
+		var world = load("res://scene/Ending.tscn").instance()
+		get_tree().get_root().add_child(world)
+		if(get_tree().get_root().get_node("main")):get_tree().get_root().get_node("main").queue_free()
+	pass # replace with function body

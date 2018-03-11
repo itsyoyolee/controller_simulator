@@ -1,10 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Script/main.gd" type="Script" id=1]
 [ext_resource path="res://scene/controller.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Img/screen.png" type="Texture" id=3]
 [ext_resource path="res://scene/game.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Img/handmovement.png" type="Texture" id=5]
+[ext_resource path="res://Img/CNS.png" type="Texture" id=6]
+[ext_resource path="res://Img/WQT.png" type="Texture" id=7]
+[ext_resource path="res://Img/NB.png" type="Texture" id=8]
 
 [sub_resource type="Animation" id=1]
 
@@ -44,7 +47,66 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3 ]
 }
 
-[node name="main" type="Node2D"]
+[sub_resource type="Animation" id=3]
+
+resource_name = "Shake"
+length = 0.6
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Controller:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 1 ), Vector2( -26.6571, 35.8592 ), Vector2( -45.112, -21.556 ), Vector2( 34.8592, -21.556 ), Vector2( -24.6065, 15.3538 ), Vector2( 18.4549, 7.15163 ), Vector2( 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+
+resource_name = "CNS"
+length = 1.0
+loop = false
+step = 0.1
+
+[sub_resource type="Animation" id=5]
+
+resource_name = "NB"
+length = 1.0
+loop = false
+step = 0.1
+
+[sub_resource type="Animation" id=6]
+
+resource_name = "Shake"
+length = 0.6
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Controller:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 1 ), Vector2( -26.6571, 35.8592 ), Vector2( -45.112, -21.556 ), Vector2( 34.8592, -21.556 ), Vector2( -24.6065, 15.3538 ), Vector2( 18.4549, 7.15163 ), Vector2( 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+
+resource_name = "WTF"
+length = 1.0
+loop = false
+step = 0.1
+
+[node name="main" type="Node2D" index="0"]
 
 position = Vector2( -13, -9 )
 script = ExtResource( 1 )
@@ -60,6 +122,9 @@ position = Vector2( 896, 298 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Game" parent="." index="2" instance=ExtResource( 4 )]
 
@@ -83,12 +148,15 @@ _sections_unfolded = [ "Playback Options" ]
 
 [node name="Sprite" type="Sprite" parent="." index="4"]
 
-position = Vector2( 895, 453 )
+position = Vector2( 893.149, 445.598 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 5 )
 hframes = 11
 frame = 1
 _sections_unfolded = [ "Animation", "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="audio" type="AudioStreamPlayer" parent="." index="5"]
 
@@ -97,6 +165,59 @@ volume_db = 0.0
 autoplay = true
 mix_target = 0
 bus = "Master"
+
+[node name="HUD" type="AnimationPlayer" parent="." index="6"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Shake = SubResource( 3 )
+blend_times = [  ]
+
+[node name="HUD2" type="AnimationPlayer" parent="." index="7"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/CNS = SubResource( 4 )
+anims/NB = SubResource( 5 )
+anims/Shake = SubResource( 6 )
+anims/WTF = SubResource( 7 )
+blend_times = [  ]
+
+[node name="CNS" type="Sprite" parent="HUD2" index="0"]
+
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 603.602, 303.465 )
+scale = Vector2( 2.28694, 1.79795 )
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="WQT" type="Sprite" parent="HUD2" index="1"]
+
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 473.044, -11.1315 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="NB" type="Sprite" parent="HUD2" index="2"]
+
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 488.78, 327.828 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 8 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[connection signal="animation_finished" from="HUD" to="." method="_on_HUD_animation_finished"]
+
+[connection signal="animation_finished" from="HUD2" to="." method="_on_HUD_animation_finished"]
 
 
 [editable path="Game"]
