@@ -68,10 +68,6 @@ position = Vector2( 896, 254 )
 scale = Vector2( 2.00347, 2.00347 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Sprite" parent="Game/Game1" index="0"]
-
-frame = 0
-
 [node name="Anim" type="AnimationPlayer" parent="." index="3"]
 
 root_node = NodePath("..")

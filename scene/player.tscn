@@ -8,7 +8,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
+extents = Vector2( 7.89954, 8.5919 )
 
 [sub_resource type="Animation" id=2]
 
@@ -109,7 +109,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="body" type="KinematicBody2D" parent="." index="0"]
 
-editor/display_folded = true
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -118,7 +117,7 @@ _sections_unfolded = [ "Collision", "collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="body" index="0"]
 
-position = Vector2( 0.594414, -0.567699 )
+position = Vector2( -1.00527, 5.31818 )
 scale = Vector2( 2.60403, 2.50551 )
 shape = SubResource( 1 )
 
@@ -126,8 +125,11 @@ shape = SubResource( 1 )
 
 texture = ExtResource( 2 )
 hframes = 15
-frame = 6
 _sections_unfolded = [ "Animation", "Region" ]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="Anim" type="AnimationPlayer" parent="body" index="2"]
 
@@ -153,9 +155,14 @@ max_distance = 2000.0
 attenuation = 1.0
 bus = "Master"
 area_mask = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="hitSFX" type="AudioStreamPlayer2D" parent="." index="2"]
 
+position = Vector2( 0.647064, 4.20594 )
 stream = ExtResource( 4 )
 volume_db = 0.0
 autoplay = false
@@ -163,5 +170,9 @@ max_distance = 2000.0
 attenuation = 1.0
 bus = "Master"
 area_mask = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 

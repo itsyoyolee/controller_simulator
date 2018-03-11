@@ -1,8 +1,8 @@
 extends Node2D
 
-var gameMode=[1,2,3,4,6,7,8,9]
+var gameMode=[0,1,2,3,4,5,6,7,8,9]
 var endPoint=50.0
-var anim="mario"
+var anim="kof"
 func _ready():
 	pass
 

@@ -40,7 +40,7 @@ func _process(delta):
 		delayTimer = 0
 	else:
 		delayTimer += 1
-		if(delayTimer > 30):
+		if(delayTimer > 20):
 			$Sprite.offset.y = 0
 			$Sprite.offset.x= 0
 			$Sprite.frame=0

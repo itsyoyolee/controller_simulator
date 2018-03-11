@@ -41,9 +41,9 @@ extents = Vector2( 4.74378, 18.6514 )
 [sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
-extents = Vector2( 3.66998, 20.1338 )
+extents = Vector2( 4.06007, 20.1338 )
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -262,24 +262,25 @@ angular_damp = -1.0
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="RigidBody2D" index="0"]
 
-position = Vector2( -24.9463, -204.075 )
-scale = Vector2( 0.1804, 1 )
+position = Vector2( -24.0323, -143.583 )
+scale = Vector2( 0.1804, 1.45801 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" index="1"]
 
-position = Vector2( -11.9249, -504.062 )
+position = Vector2( -10.7596, -502.095 )
+scale = Vector2( 0.862887, 1 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="RigidBody2D" index="2"]
 
-position = Vector2( -24.1324, -726.442 )
+position = Vector2( -23.3691, -717.341 )
 shape = SubResource( 3 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="RigidBody2D" index="3"]
 
-position = Vector2( 9.26867, -552.985 )
+position = Vector2( 9.16666, -547.633 )
 shape = SubResource( 4 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="RigidBody2D" index="4"]
@@ -289,14 +290,14 @@ shape = SubResource( 5 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="RigidBody2D" index="5"]
 
-position = Vector2( 28.2016, -570.776 )
+position = Vector2( 28.0486, -557.396 )
 shape = SubResource( 6 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D" index="6"]
 
 position = Vector2( 0.0626259, 26.2831 )
 build_mode = 1
-polygon = PoolVector2Array( 3.44392, -183.213, 16.2134, -35.124, 38.5138, -42.9712, 39.1413, -470.973, 43.0112, 179.261, -40.2786, 189.17, -35.9542, -558.768, -35.0129, -160.946, -21.5208, -108.818, -17.128, -73.1508, -5.27296, -191.936 )
+polygon = PoolVector2Array( 3.43436, -195.196, 16.2134, -35.124, 38.5138, -42.9712, 39.1413, -470.973, 43.0112, 179.261, -40.2786, 189.17, -35.9542, -558.768, -35.0129, -160.946, -21.5208, -108.818, -17.128, -73.1508, -4.44473, -193.594 )
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="RigidBody2D" index="7"]
 
