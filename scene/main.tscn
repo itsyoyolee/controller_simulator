@@ -5,7 +5,7 @@
 [ext_resource path="res://Img/screen.png" type="Texture" id=3]
 [ext_resource path="res://scene/game.tscn" type="PackedScene" id=4]
 
-[node name="main" type="Node2D"]
+[node name="main" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -17,10 +17,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 760.0
-margin_top = 2.0
-margin_right = 1049.0
-margin_bottom = 597.0
+margin_left = 764.0
+margin_right = 1053.0
+margin_bottom = 595.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -33,7 +32,7 @@ stretch_mode = 0
 
 [node name="Game" parent="." index="2" instance=ExtResource( 4 )]
 
-position = Vector2( 904.024, 255.585 )
+position = Vector2( 909.024, 254.585 )
 scale = Vector2( 2.00347, 2.00347 )
 _sections_unfolded = [ "Transform" ]
 

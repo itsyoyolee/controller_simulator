@@ -5,9 +5,9 @@ var playingGame = "NULL"
 var preGame = "NULL"
 
 func _ready():
+	#add all game int scene to gameList
 	for index in (get_child_count()-1) :
 		gameList.append(get_node("Game"+str(index)))
-	print(gameList)
 	playingGame=gameList[randi()%gameList.size()]
 	preGame=playingGame
 	pass

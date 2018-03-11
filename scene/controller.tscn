@@ -11,7 +11,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 29.4019, 30.6161 )
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -119,7 +119,222 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="player" parent="." index="12" instance=ExtResource( 5 )]
+[node name="RigidBody2D2" type="RigidBody2D" parent="." index="12"]
+
+editor/display_folded = true
+position = Vector2( 102.666, 349.767 )
+scale = Vector2( 1.55666, 0.328947 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+mode = 1
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = -1.0
+angular_velocity = 0.0
+angular_damp = -1.0
+
+[node name="Sprite" type="Sprite" parent="RigidBody2D2" index="0"]
+
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2" index="1"]
+
+position = Vector2( 0, -1.10803 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="RigidBody2D3" type="RigidBody2D" parent="." index="13"]
+
+editor/display_folded = true
+position = Vector2( 211.666, 271.767 )
+scale = Vector2( 1.55666, 0.328947 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+mode = 1
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = -1.0
+angular_velocity = 0.0
+angular_damp = -1.0
+
+[node name="Sprite" type="Sprite" parent="RigidBody2D3" index="0"]
+
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D3" index="1"]
+
+position = Vector2( 0, -1.10803 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="RigidBody2D4" type="RigidBody2D" parent="." index="14"]
+
+editor/display_folded = true
+position = Vector2( 585.666, 344.767 )
+scale = Vector2( 1.55666, 0.328947 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+mode = 1
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = -1.0
+angular_velocity = 0.0
+angular_damp = -1.0
+
+[node name="Sprite" type="Sprite" parent="RigidBody2D4" index="0"]
+
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D4" index="1"]
+
+position = Vector2( 0, -1.10803 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="RigidBody2D5" type="RigidBody2D" parent="." index="15"]
+
+editor/display_folded = true
+position = Vector2( 667.666, 301.767 )
+scale = Vector2( 1.55666, 0.328947 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+mode = 1
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = -1.0
+angular_velocity = 0.0
+angular_damp = -1.0
+
+[node name="Sprite" type="Sprite" parent="RigidBody2D5" index="0"]
+
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D5" index="1"]
+
+position = Vector2( 0, -1.10803 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="RigidBody2D6" type="RigidBody2D" parent="." index="16"]
+
+editor/display_folded = true
+position = Vector2( 466.666, 288.767 )
+scale = Vector2( 1.55666, 0.328947 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+mode = 1
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = -1.0
+angular_velocity = 0.0
+angular_damp = -1.0
+
+[node name="Sprite" type="Sprite" parent="RigidBody2D6" index="0"]
+
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D6" index="1"]
+
+position = Vector2( 0, -1.10803 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="player" parent="." index="17" instance=ExtResource( 5 )]
 
 position = Vector2( 346.484, 370.61 )
 

@@ -13,7 +13,6 @@ var survive_time 			#存活時間
 
 func _ready():
 	playing_game = get_node("Game").ChooseGame(false)
-	print(playing_game.anim)
 	playing_game.get_node("../Anim").play(playing_game.anim)
 	Init_Btn()
 	fail_time = playing_game.endPoint
@@ -26,8 +25,6 @@ func _process(delta):
 			survive_time -= delta
 		else:# COMPLETE !
 			playing_game = get_node("Game").ChooseGame(true)
-			print("T")
-			print(playing_game.anim)
 			playing_game.get_node("../Anim").play(playing_game.anim)
 			fail_time = playing_game.endPoint
 			survive_time = fail_time
@@ -38,8 +35,6 @@ func _process(delta):
 			Btn_Update(delta)
 		else:# GAME CHANGE!
 			playing_game = get_node("Game").ChooseGame(false)
-			print("F")
-			print(playing_game.anim)
 			fail_time = playing_game.endPoint
 			playing_game.get_node("../Anim").play(playing_game.anim)
 			survive_time = fail_time
@@ -74,7 +69,6 @@ func Game_Over():
 	pass
 
 func Init_Btn():
-	print("INIT")
 	for index in Button_Num:
 		button_list.append(get_node("Controller").get_node(str(index)))
 	pass
