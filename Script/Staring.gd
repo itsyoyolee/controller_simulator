@@ -5,6 +5,8 @@ func _ready():
 	pass
 
 func _process(delta):
+	if(Input.is_action_just_pressed("ui_select")):
+		_on_TextureButton_pressed()
 	pass
 
 func _on_TextureButton_pressed():

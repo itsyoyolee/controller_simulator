@@ -4,7 +4,7 @@
 [ext_resource path="res://Img/ending.png" type="Texture" id=2]
 [ext_resource path="res://sound/Air_to_the_Throne.ogg" type="AudioStream" id=3]
 
-[node name="Ending" type="Node2D"]
+[node name="Ending" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
