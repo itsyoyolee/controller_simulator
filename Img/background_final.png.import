@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/handmovement.png-98eb9e6ab25a76dfe8224edcf52a0324.stex"
+path="res://.import/background_final.png-9c670ff4aa26112acae2e7e0fbdc89d7.stex"
 
 [deps]
 
-source_file="res://Img/handmovement.png"
-source_md5="9b5f1165e51760f3c84c9a0f3e95d45e"
+source_file="res://Img/background_final.png"
+source_md5="bed594a5eaf425f3e300cb60ccfdc320"
 
-dest_files=[ "res://.import/handmovement.png-98eb9e6ab25a76dfe8224edcf52a0324.stex" ]
-dest_md5="4cd5a21ac7abc8bf7cba83bf07e346b1"
+dest_files=[ "res://.import/background_final.png-9c670ff4aa26112acae2e7e0fbdc89d7.stex" ]
+dest_md5="407cc7b8f3ea37e9f0e51dd080e22896"
 
 [params]
 

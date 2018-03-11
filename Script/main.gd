@@ -39,6 +39,7 @@ func _process(delta):
 		else:# GAME CHANGE!
 			controller_health -= 50
 			playing_game = get_node("Game").ChooseGame(false)
+			$Anim.play("handBreak")
 			fail_time = playing_game.endPoint
 			playing_game.get_node("../Anim").play(playing_game.anim)
 			survive_time = fail_time

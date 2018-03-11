@@ -2,9 +2,7 @@ extends Node2D
 
 
 func _ready():
-	get_node("Score").text = str(global.score)
+	$Label.text = str(global.score)
+	$Sprite.frame=randi()%3
 	pass
 
-func _process(delta):
-
-	pass

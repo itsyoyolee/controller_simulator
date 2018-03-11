@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Script/controller.gd" type="Script" id=1]
-[ext_resource path="res://Img/background.png" type="Texture" id=2]
+[ext_resource path="res://Img/background_final.png" type="Texture" id=2]
 [ext_resource path="res://scene/button.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Img/button_left.png" type="Texture" id=4]
 [ext_resource path="res://Img/button_top.png" type="Texture" id=5]
@@ -43,7 +43,7 @@ extents = Vector2( 4.74378, 18.6514 )
 custom_solver_bias = 0.0
 extents = Vector2( 3.66998, 20.1338 )
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -51,9 +51,9 @@ _sections_unfolded = [ "Transform" ]
 [node name="preview" type="Sprite" parent="." index="0"]
 
 position = Vector2( 526.914, 296.298 )
-scale = Vector2( 2.05616, 2.05616 )
+scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
-_sections_unfolded = [ "Visibility" ]
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="0" parent="." index="1" instance=ExtResource( 3 )]
 
@@ -62,11 +62,11 @@ position = Vector2( 207.246, 154.493 )
 scale = Vector2( 2.91256, 2.91256 )
 buttonType = "mushroom"
 
-[node name="BG" parent="0" index="0"]
+[node name="BG" parent="0" index="2"]
 
 hframes = 5
 
-[node name="Sprite" parent="0" index="2"]
+[node name="Sprite" parent="0" index="3"]
 
 hframes = 5
 
@@ -76,16 +76,16 @@ editor/display_folded = true
 position = Vector2( 177.802, 307.204 )
 scale = Vector2( 2.34775, 1.07274 )
 
-[node name="BG" parent="1" index="0"]
-
-texture = ExtResource( 4 )
-
 [node name="anim" parent="1" index="1"]
 
 texture = ExtResource( 4 )
 hframes = 1
 
-[node name="Sprite" parent="1" index="2"]
+[node name="BG" parent="1" index="2"]
+
+texture = ExtResource( 4 )
+
+[node name="Sprite" parent="1" index="3"]
 
 texture = ExtResource( 4 )
 
@@ -95,16 +95,16 @@ editor/display_folded = true
 position = Vector2( 284.79, 232.376 )
 scale = Vector2( 1.19713, 2.13538 )
 
-[node name="BG" parent="2" index="0"]
-
-texture = ExtResource( 5 )
-
 [node name="anim" parent="2" index="1"]
 
 texture = ExtResource( 5 )
 hframes = 1
 
-[node name="Sprite" parent="2" index="2"]
+[node name="BG" parent="2" index="2"]
+
+texture = ExtResource( 5 )
+
+[node name="Sprite" parent="2" index="3"]
 
 texture = ExtResource( 5 )
 
@@ -114,16 +114,16 @@ editor/display_folded = true
 position = Vector2( 371.176, 280.909 )
 scale = Vector2( 2.34775, 1.07274 )
 
-[node name="BG" parent="3" index="0"]
-
-texture = ExtResource( 6 )
-
 [node name="anim" parent="3" index="1"]
 
 texture = ExtResource( 6 )
 hframes = 1
 
-[node name="Sprite" parent="3" index="2"]
+[node name="BG" parent="3" index="2"]
+
+texture = ExtResource( 6 )
+
+[node name="Sprite" parent="3" index="3"]
 
 texture = ExtResource( 6 )
 
@@ -133,16 +133,16 @@ editor/display_folded = true
 position = Vector2( 286.564, 365.399 )
 scale = Vector2( 1.19713, 2.13538 )
 
-[node name="BG" parent="4" index="0"]
-
-texture = ExtResource( 7 )
-
 [node name="anim" parent="4" index="1"]
 
 texture = ExtResource( 7 )
 hframes = 1
 
-[node name="Sprite" parent="4" index="2"]
+[node name="BG" parent="4" index="2"]
+
+texture = ExtResource( 7 )
+
+[node name="Sprite" parent="4" index="3"]
 
 texture = ExtResource( 7 )
 
@@ -153,11 +153,11 @@ position = Vector2( 652.386, 384.813 )
 scale = Vector2( 2.91256, 2.91256 )
 buttonType = "mushroom"
 
-[node name="BG" parent="5" index="0"]
+[node name="BG" parent="5" index="2"]
 
 hframes = 5
 
-[node name="Sprite" parent="5" index="2"]
+[node name="Sprite" parent="5" index="3"]
 
 hframes = 5
 
@@ -167,16 +167,16 @@ editor/display_folded = true
 position = Vector2( 460.867, 213.485 )
 scale = Vector2( 2.47746, 2.44104 )
 
-[node name="BG" parent="6" index="0"]
-
-texture = ExtResource( 8 )
-
 [node name="anim" parent="6" index="1"]
 
 texture = ExtResource( 8 )
 hframes = 1
 
-[node name="Sprite" parent="6" index="2"]
+[node name="BG" parent="6" index="2"]
+
+texture = ExtResource( 8 )
+
+[node name="Sprite" parent="6" index="3"]
 
 texture = ExtResource( 8 )
 
@@ -186,16 +186,16 @@ editor/display_folded = true
 position = Vector2( 551.708, 148.532 )
 scale = Vector2( 2.47746, 2.44104 )
 
-[node name="BG" parent="7" index="0"]
-
-texture = ExtResource( 9 )
-
 [node name="anim" parent="7" index="1"]
 
 texture = ExtResource( 9 )
 hframes = 1
 
-[node name="Sprite" parent="7" index="2"]
+[node name="BG" parent="7" index="2"]
+
+texture = ExtResource( 9 )
+
+[node name="Sprite" parent="7" index="3"]
 
 texture = ExtResource( 9 )
 
@@ -205,16 +205,16 @@ editor/display_folded = true
 position = Vector2( 633.066, 213.701 )
 scale = Vector2( 2.47746, 2.44104 )
 
-[node name="BG" parent="8" index="0"]
-
-texture = ExtResource( 10 )
-
 [node name="anim" parent="8" index="1"]
 
 texture = ExtResource( 10 )
 hframes = 1
 
-[node name="Sprite" parent="8" index="2"]
+[node name="BG" parent="8" index="2"]
+
+texture = ExtResource( 10 )
+
+[node name="Sprite" parent="8" index="3"]
 
 texture = ExtResource( 10 )
 
@@ -224,22 +224,21 @@ editor/display_folded = true
 position = Vector2( 563.157, 311.834 )
 scale = Vector2( 2.47746, 2.44104 )
 
-[node name="BG" parent="9" index="0"]
-
-texture = ExtResource( 11 )
-
 [node name="anim" parent="9" index="1"]
 
 texture = ExtResource( 11 )
 hframes = 1
 
-[node name="Sprite" parent="9" index="2"]
+[node name="BG" parent="9" index="2"]
+
+texture = ExtResource( 11 )
+
+[node name="Sprite" parent="9" index="3"]
 
 texture = ExtResource( 11 )
 
 [node name="RigidBody2D" type="RigidBody2D" parent="." index="11"]
 
-editor/display_folded = true
 position = Vector2( 389.979, 449.767 )
 scale = Vector2( 8.62894, 0.328947 )
 input_pickable = false

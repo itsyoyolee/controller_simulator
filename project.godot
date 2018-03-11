@@ -20,7 +20,9 @@ global="*res://Script/global.gd"
 
 [display]
 
+window/size/height=576
 window/dpi/allow_hidpi=true
+window/stretch/mode="viewport"
 
 [input]
 
