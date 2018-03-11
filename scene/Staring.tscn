@@ -6,7 +6,7 @@
 [ext_resource path="res://Img/命名-1.png" type="Texture" id=4]
 [ext_resource path="res://sound/Eyes_of_Glory.ogg" type="AudioStream" id=5]
 
-[node name="Starting" type="Node2D"]
+[node name="Starting" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 

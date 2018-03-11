@@ -22,6 +22,7 @@ func _process(delta):
 	pass
 func playAgain():
 	get_tree().change_scene("res://scene/Staring.tscn")
+	if(get_tree().get_root().get_node("Ending")):get_tree().get_root().get_node("Ending").queue_free()
 	print("hi")
 	pass
 	

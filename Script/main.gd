@@ -18,7 +18,7 @@ func _ready():
 	playing_game.get_node("../Anim").play(playing_game.anim)
 	Init_Btn()
 	fail_time = playing_game.endPoint
-	survive_time = playing_game.endPoint
+	survive_time = playing_game.endPoint*0.7
 	$Anim.play("handMove")
 	randomize()
 	if(randi()%2):
@@ -41,7 +41,7 @@ func _process(delta):
 			get_node("HUD2").play("NB")
 			playing_game.get_node("../Anim").play(playing_game.anim)
 			fail_time = playing_game.endPoint
-			survive_time = fail_time
+			survive_time = fail_time*0.7
 		if (fail_time >= 0):# 按鍵設定及判定
 			#決定隨機點擊
 			Btn_Decide(delta)
@@ -58,7 +58,7 @@ func _process(delta):
 			$Anim.play("handBreak")
 			fail_time = playing_game.endPoint
 			playing_game.get_node("../Anim").play(playing_game.anim)
-			survive_time = fail_time
+			survive_time = fail_time*0.7
 	else:
 		Game_Over()
 	pass

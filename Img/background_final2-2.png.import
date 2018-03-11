@@ -10,7 +10,7 @@ source_file="res://Img/background_final2-2.png"
 source_md5="e93acca18948f4d6f9192e6b4f6fea25"
 
 dest_files=[ "res://.import/background_final2-2.png-d90bc7cc00ba48944c505cda3a977897.stex" ]
-dest_md5="f8c8417110ad9d61929aaa3501ab4e45"
+dest_md5="ef026fac49ba06e8afbdd959755a3646"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
