@@ -22,7 +22,6 @@ func _ready():
 func _process(delta):
 	Move(delta)
 	Anim(delta)
-	print (linear_vel.y)
 	pass
 
 func Move(var delta):

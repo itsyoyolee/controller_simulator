@@ -13,6 +13,7 @@ var survive_time 			#存活時間
 
 func _ready():
 	playing_game = get_node("Game").ChooseGame(false)
+	playing_game.get_node("../Anim").play(playing_game.anim)
 	Init_Btn()
 	fail_time = playing_game.endPoint
 	survive_time = playing_game.endPoint
@@ -24,6 +25,7 @@ func _process(delta):
 			survive_time -= delta
 		else:# COMPLETE !
 			playing_game = get_node("Game").ChooseGame(true)
+			playing_game.get_node("../Anim").play(playing_game.anim)
 			fail_time = playing_game.endPoint
 			survive_time = fail_time
 		if (fail_time >= 0):# 按鍵設定及判定
@@ -34,6 +36,7 @@ func _process(delta):
 		else:# GAME CHANGE!
 			playing_game = get_node("Game").ChooseGame(false)
 			fail_time = playing_game.endPoint
+			playing_game.get_node("../Anim").play(playing_game.anim)
 			survive_time = fail_time
 	else:
 		Game_Over()
@@ -66,7 +69,6 @@ func Game_Over():
 	pass
 
 func Init_Btn():
-	print("INIT")
 	for index in Button_Num:
 		button_list.append(get_node("Controller").get_node(str(index)))
 	pass
