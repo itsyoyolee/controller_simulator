@@ -10,7 +10,7 @@ source_file="res://Img/text_button.png"
 source_md5="a4e62173adecdf4555a3d8c5a96ad039"
 
 dest_files=[ "res://.import/text_button.png-23ed18f8ea6a8e200f8bcbe1b63d6271.stex" ]
-dest_md5="2b594271eea8c942421189222bc5d9a8"
+dest_md5="a043dda941a6595bb5e05928ae31187d"
 
 [params]
 
@@ -23,7 +23,7 @@ flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
-process/fix_alpha_border=true
+process/fix_alpha_border=false
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false

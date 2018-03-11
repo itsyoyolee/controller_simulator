@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Script/button.gd" type="Script" id=1]
-[ext_resource path="res://Img/mushrooom.png" type="Texture" id=2]
+[ext_resource path="res://sound/buttonHit.wav" type="AudioStream" id=2]
+[ext_resource path="res://Img/mushrooom.png" type="Texture" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -13,24 +14,34 @@ radius = 10.0
 script = ExtResource( 1 )
 buttonType = "normal"
 
-[node name="BG" type="Sprite" parent="." index="0"]
+[node name="SFX" type="AudioStreamPlayer2D" parent="." index="0"]
 
-modulate = Color( 0.421875, 0.421875, 0.421875, 0.353608 )
-texture = ExtResource( 2 )
-_sections_unfolded = [ "Animation", "Material", "Offset", "Transform", "Visibility" ]
+stream = ExtResource( 2 )
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
 
 [node name="anim" type="Sprite" parent="." index="1"]
 
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 hframes = 5
 _sections_unfolded = [ "Animation", "Offset", "Visibility" ]
 
-[node name="Sprite" type="Sprite" parent="." index="2"]
+[node name="BG" type="Sprite" parent="." index="2"]
 
-texture = ExtResource( 2 )
+modulate = Color( 0.421875, 0.421875, 0.421875, 0.353608 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Transform", "Visibility" ]
+
+[node name="Sprite" type="Sprite" parent="." index="3"]
+
+texture = ExtResource( 3 )
 _sections_unfolded = [ "Animation", "Offset" ]
 
-[node name="area" type="Area2D" parent="." index="3"]
+[node name="area" type="Area2D" parent="." index="4"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )

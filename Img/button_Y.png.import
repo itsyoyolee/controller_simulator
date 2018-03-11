@@ -10,7 +10,11 @@ source_file="res://Img/button_Y.png"
 source_md5="9f8529bea42b1c97ecc9226c241e7e6d"
 
 dest_files=[ "res://.import/button_Y.png-bbf0137868c738ec93d668f25133603d.stex" ]
+<<<<<<< HEAD
 dest_md5="33150652130be1265962dd0fdc45a873"
+=======
+dest_md5="a4e1dfdd43f64fca12667fddb05fa404"
+>>>>>>> 67ded1622d655a331df34afa652012bdb6967468
 
 [params]
 
@@ -23,7 +27,7 @@ flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
-process/fix_alpha_border=true
+process/fix_alpha_border=false
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
