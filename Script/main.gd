@@ -17,9 +17,11 @@ func _ready():
 	Init_Btn()
 	fail_time = playing_game.endPoint
 	survive_time = playing_game.endPoint
+	$Anim.play("handMove")
 	pass
 
 func _process(delta):
+	
 	if (controller_health >= 0):
 		score+=delta
 		if (survive_time >= 0):# 計算存活
@@ -69,6 +71,10 @@ func Btn_Update(delta):
 func Game_Over():
 	print(score)
 	print("OVER")
+	global.score = score
+	var world = load("res://scene/Ending.tscn").instance()
+	get_tree().get_root().add_child(world)
+	if(get_tree().get_root().get_node("main")):get_tree().get_root().get_node("main").queue_free()
 	pass
 
 func Init_Btn():

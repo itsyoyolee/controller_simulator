@@ -21,7 +21,21 @@ func _process(delta):
 	if(enable):
 		pressDetect()
 		timer += 1
-		$Sprite.offset.y = 10
+		if(buttonType=="normal"):
+			$Sprite.offset.y = -10
+		elif(buttonType=="mushroom"):
+			if(dir==0):
+				$Sprite.offset.x=-10
+				$Sprite.frame=3
+			elif(dir==1):
+				$Sprite.offset.y=10
+				$Sprite.frame=2
+			elif(dir==2):
+				$Sprite.offset.x=10
+				$Sprite.frame=1
+			elif(dir==3):
+				$Sprite.offset.y=-10
+				$Sprite.frame=4
 		$anim.offset.y = 0
 		$anim.scale *= Vector2(1.1, 1.1)
 		$anim.modulate.a *=0.8
@@ -30,6 +44,8 @@ func _process(delta):
 		delayTimer += 1
 		if(delayTimer > 30):
 			$Sprite.offset.y = 0
+			$Sprite.offset.x= 0
+			$Sprite.frame=0
 			$anim.offset.y = 0
 			$anim.modulate.a = 1
 		timer = 0

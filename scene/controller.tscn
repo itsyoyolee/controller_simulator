@@ -1,15 +1,47 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Script/controller.gd" type="Script" id=1]
-[ext_resource path="res://preview.png" type="Texture" id=2]
+[ext_resource path="res://Img/background.png" type="Texture" id=2]
 [ext_resource path="res://scene/button.tscn" type="PackedScene" id=3]
-[ext_resource path="res://icon.png" type="Texture" id=4]
-[ext_resource path="res://scene/player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Img/button_left.png" type="Texture" id=4]
+[ext_resource path="res://Img/button_top.png" type="Texture" id=5]
+[ext_resource path="res://Img/button_right.png" type="Texture" id=6]
+[ext_resource path="res://Img/button_down.png" type="Texture" id=7]
+[ext_resource path="res://Img/button_x.png" type="Texture" id=8]
+[ext_resource path="res://Img/button_Y.png" type="Texture" id=9]
+[ext_resource path="res://Img/button_B.png" type="Texture" id=10]
+[ext_resource path="res://Img/button_A.png" type="Texture" id=11]
+[ext_resource path="res://scene/player.tscn" type="PackedScene" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 29.4019, 30.6161 )
+extents = Vector2( 17.5964, 81.4861 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 4.40469, 33.4768 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 7.06095, 20.134 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 4.57424, 23.0992 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 4.74378, 18.6514 )
+
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 3.66998, 20.1338 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -26,60 +58,190 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="0" parent="." index="1" instance=ExtResource( 3 )]
 
-position = Vector2( 217.975, 204.236 )
+editor/display_folded = true
+position = Vector2( 207.246, 154.493 )
 scale = Vector2( 2.91256, 2.91256 )
 buttonType = "mushroom"
+
+[node name="BG" parent="0" index="0"]
+
+hframes = 5
+
+[node name="Sprite" parent="0" index="2"]
+
+hframes = 5
 
 [node name="1" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( 245.101, 324.76 )
+editor/display_folded = true
+position = Vector2( 177.802, 307.204 )
 scale = Vector2( 2.34775, 1.07274 )
+
+[node name="BG" parent="1" index="0"]
+
+texture = ExtResource( 4 )
+
+[node name="anim" parent="1" index="1"]
+
+texture = ExtResource( 4 )
+hframes = 1
+
+[node name="Sprite" parent="1" index="2"]
+
+texture = ExtResource( 4 )
 
 [node name="2" parent="." index="3" instance=ExtResource( 3 )]
 
-position = Vector2( 287.228, 281.144 )
+editor/display_folded = true
+position = Vector2( 284.79, 232.376 )
 scale = Vector2( 1.19713, 2.13538 )
+
+[node name="BG" parent="2" index="0"]
+
+texture = ExtResource( 5 )
+
+[node name="anim" parent="2" index="1"]
+
+texture = ExtResource( 5 )
+hframes = 1
+
+[node name="Sprite" parent="2" index="2"]
+
+texture = ExtResource( 5 )
 
 [node name="3" parent="." index="4" instance=ExtResource( 3 )]
 
-position = Vector2( 323.384, 326.75 )
+editor/display_folded = true
+position = Vector2( 371.176, 280.909 )
 scale = Vector2( 2.34775, 1.07274 )
+
+[node name="BG" parent="3" index="0"]
+
+texture = ExtResource( 6 )
+
+[node name="anim" parent="3" index="1"]
+
+texture = ExtResource( 6 )
+hframes = 1
+
+[node name="Sprite" parent="3" index="2"]
+
+texture = ExtResource( 6 )
 
 [node name="4" parent="." index="5" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 position = Vector2( 286.564, 365.399 )
 scale = Vector2( 1.19713, 2.13538 )
 
+[node name="BG" parent="4" index="0"]
+
+texture = ExtResource( 7 )
+
+[node name="anim" parent="4" index="1"]
+
+texture = ExtResource( 7 )
+hframes = 1
+
+[node name="Sprite" parent="4" index="2"]
+
+texture = ExtResource( 7 )
+
 [node name="5" parent="." index="6" instance=ExtResource( 3 )]
 
-position = Vector2( 466.094, 350.188 )
+editor/display_folded = true
+position = Vector2( 652.386, 384.813 )
 scale = Vector2( 2.91256, 2.91256 )
 buttonType = "mushroom"
 
+[node name="BG" parent="5" index="0"]
+
+hframes = 5
+
+[node name="Sprite" parent="5" index="2"]
+
+hframes = 5
+
 [node name="6" parent="." index="7" instance=ExtResource( 3 )]
 
-position = Vector2( 509.635, 230.554 )
+editor/display_folded = true
+position = Vector2( 460.867, 213.485 )
 scale = Vector2( 2.47746, 2.44104 )
+
+[node name="BG" parent="6" index="0"]
+
+texture = ExtResource( 8 )
+
+[node name="anim" parent="6" index="1"]
+
+texture = ExtResource( 8 )
+hframes = 1
+
+[node name="Sprite" parent="6" index="2"]
+
+texture = ExtResource( 8 )
 
 [node name="7" parent="." index="8" instance=ExtResource( 3 )]
 
-position = Vector2( 565.363, 176.817 )
+editor/display_folded = true
+position = Vector2( 551.708, 148.532 )
 scale = Vector2( 2.47746, 2.44104 )
+
+[node name="BG" parent="7" index="0"]
+
+texture = ExtResource( 9 )
+
+[node name="anim" parent="7" index="1"]
+
+texture = ExtResource( 9 )
+hframes = 1
+
+[node name="Sprite" parent="7" index="2"]
+
+texture = ExtResource( 9 )
 
 [node name="8" parent="." index="9" instance=ExtResource( 3 )]
 
-position = Vector2( 618.436, 233.208 )
+editor/display_folded = true
+position = Vector2( 633.066, 213.701 )
 scale = Vector2( 2.47746, 2.44104 )
+
+[node name="BG" parent="8" index="0"]
+
+texture = ExtResource( 10 )
+
+[node name="anim" parent="8" index="1"]
+
+texture = ExtResource( 10 )
+hframes = 1
+
+[node name="Sprite" parent="8" index="2"]
+
+texture = ExtResource( 10 )
 
 [node name="9" parent="." index="10" instance=ExtResource( 3 )]
 
-position = Vector2( 560.719, 279.647 )
+editor/display_folded = true
+position = Vector2( 563.157, 311.834 )
 scale = Vector2( 2.47746, 2.44104 )
+
+[node name="BG" parent="9" index="0"]
+
+texture = ExtResource( 11 )
+
+[node name="anim" parent="9" index="1"]
+
+texture = ExtResource( 11 )
+hframes = 1
+
+[node name="Sprite" parent="9" index="2"]
+
+texture = ExtResource( 11 )
 
 [node name="RigidBody2D" type="RigidBody2D" parent="." index="11"]
 
 editor/display_folded = true
-position = Vector2( 416.979, 418.767 )
+position = Vector2( 389.979, 449.767 )
 scale = Vector2( 8.62894, 0.328947 )
 input_pickable = false
 collision_layer = 1
@@ -100,242 +262,56 @@ linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
 
-[node name="Sprite" type="Sprite" parent="RigidBody2D" index="0"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="RigidBody2D" index="0"]
 
-texture = ExtResource( 4 )
-_sections_unfolded = [ "Transform", "Z Index" ]
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
+position = Vector2( -24.9463, -204.075 )
+scale = Vector2( 0.1804, 1 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" index="1"]
 
-position = Vector2( 0, -1.10803 )
-shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
+position = Vector2( -11.9249, -504.062 )
+shape = SubResource( 2 )
 
-[node name="RigidBody2D2" type="RigidBody2D" parent="." index="12"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="RigidBody2D" index="2"]
 
-editor/display_folded = true
-position = Vector2( 102.666, 349.767 )
-scale = Vector2( 1.55666, 0.328947 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-mode = 1
-mass = 1.0
-friction = 1.0
-bounce = 0.0
-gravity_scale = 1.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-linear_velocity = Vector2( 0, 0 )
-linear_damp = -1.0
-angular_velocity = 0.0
-angular_damp = -1.0
+position = Vector2( -24.1324, -726.442 )
+shape = SubResource( 3 )
 
-[node name="Sprite" type="Sprite" parent="RigidBody2D2" index="0"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="RigidBody2D" index="3"]
 
-texture = ExtResource( 4 )
-_sections_unfolded = [ "Transform", "Z Index" ]
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
+position = Vector2( 9.26867, -552.985 )
+shape = SubResource( 4 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2" index="1"]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="RigidBody2D" index="4"]
 
-position = Vector2( 0, -1.10803 )
-shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
+position = Vector2( 19.7807, -287.612 )
+shape = SubResource( 5 )
 
-[node name="RigidBody2D3" type="RigidBody2D" parent="." index="13"]
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="RigidBody2D" index="5"]
 
-editor/display_folded = true
-position = Vector2( 211.666, 271.767 )
-scale = Vector2( 1.55666, 0.328947 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-mode = 1
-mass = 1.0
-friction = 1.0
-bounce = 0.0
-gravity_scale = 1.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-linear_velocity = Vector2( 0, 0 )
-linear_damp = -1.0
-angular_velocity = 0.0
-angular_damp = -1.0
+position = Vector2( 28.2016, -570.776 )
+shape = SubResource( 6 )
 
-[node name="Sprite" type="Sprite" parent="RigidBody2D3" index="0"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D" index="6"]
 
-texture = ExtResource( 4 )
-_sections_unfolded = [ "Transform", "Z Index" ]
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
+position = Vector2( 0.0626259, 26.2831 )
+build_mode = 1
+polygon = PoolVector2Array( 3.44392, -183.213, 16.2134, -35.124, 38.5138, -42.9712, 39.1413, -470.973, 43.0112, 179.261, -40.2786, 189.17, -35.9542, -558.768, -35.0129, -160.946, -21.5208, -108.818, -17.128, -73.1508, -5.27296, -191.936 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D3" index="1"]
+[node name="player" parent="." index="12" instance=ExtResource( 12 )]
 
-position = Vector2( 0, -1.10803 )
-shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
-
-[node name="RigidBody2D4" type="RigidBody2D" parent="." index="14"]
-
-editor/display_folded = true
-position = Vector2( 585.666, 344.767 )
-scale = Vector2( 1.55666, 0.328947 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-mode = 1
-mass = 1.0
-friction = 1.0
-bounce = 0.0
-gravity_scale = 1.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-linear_velocity = Vector2( 0, 0 )
-linear_damp = -1.0
-angular_velocity = 0.0
-angular_damp = -1.0
-
-[node name="Sprite" type="Sprite" parent="RigidBody2D4" index="0"]
-
-texture = ExtResource( 4 )
-_sections_unfolded = [ "Transform", "Z Index" ]
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D4" index="1"]
-
-position = Vector2( 0, -1.10803 )
-shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
-
-[node name="RigidBody2D5" type="RigidBody2D" parent="." index="15"]
-
-editor/display_folded = true
-position = Vector2( 667.666, 301.767 )
-scale = Vector2( 1.55666, 0.328947 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-mode = 1
-mass = 1.0
-friction = 1.0
-bounce = 0.0
-gravity_scale = 1.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-linear_velocity = Vector2( 0, 0 )
-linear_damp = -1.0
-angular_velocity = 0.0
-angular_damp = -1.0
-
-[node name="Sprite" type="Sprite" parent="RigidBody2D5" index="0"]
-
-texture = ExtResource( 4 )
-_sections_unfolded = [ "Transform", "Z Index" ]
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D5" index="1"]
-
-position = Vector2( 0, -1.10803 )
-shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
-
-[node name="RigidBody2D6" type="RigidBody2D" parent="." index="16"]
-
-editor/display_folded = true
-position = Vector2( 466.666, 288.767 )
-scale = Vector2( 1.55666, 0.328947 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-mode = 1
-mass = 1.0
-friction = 1.0
-bounce = 0.0
-gravity_scale = 1.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-linear_velocity = Vector2( 0, 0 )
-linear_damp = -1.0
-angular_velocity = 0.0
-angular_damp = -1.0
-
-[node name="Sprite" type="Sprite" parent="RigidBody2D6" index="0"]
-
-texture = ExtResource( 4 )
-_sections_unfolded = [ "Transform", "Z Index" ]
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D6" index="1"]
-
-position = Vector2( 0, -1.10803 )
-shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
-
-[node name="player" parent="." index="17" instance=ExtResource( 5 )]
-
-position = Vector2( 346.484, 370.61 )
+position = Vector2( 362.154, 336.027 )
 
 
+[editable path="0"]
+[editable path="1"]
+[editable path="2"]
+[editable path="3"]
+[editable path="4"]
+[editable path="5"]
+[editable path="6"]
+[editable path="7"]
+[editable path="8"]
+[editable path="9"]
