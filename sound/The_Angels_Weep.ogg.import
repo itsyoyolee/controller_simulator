@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/The_Angels_Weep.ogg-2badb71ee32c6175567494d0ba87dafd.oggstr"
+
+[deps]
+
+source_file="res://sound/The_Angels_Weep.ogg"
+source_md5="7a97fd28f61b5c6550ee3cefda895c02"
+
+dest_files=[ "res://.import/The_Angels_Weep.ogg-2badb71ee32c6175567494d0ba87dafd.oggstr" ]
+dest_md5="a2c69181f20044723a534e632914332a"
+
+[params]
+
+loop=true
+loop_offset=0

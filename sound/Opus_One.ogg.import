@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Opus_One.ogg-759e3ab8cc9dde99a412a47f028b8556.oggstr"
+
+[deps]
+
+source_file="res://sound/Opus_One.ogg"
+source_md5="39f804c0702873f41932ec39f0e82534"
+
+dest_files=[ "res://.import/Opus_One.ogg-759e3ab8cc9dde99a412a47f028b8556.oggstr" ]
+dest_md5="a481159b8217cf7d24df98eefbc38cd8"
+
+[params]
+
+loop=true
+loop_offset=0

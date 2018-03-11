@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Air_to_the_Throne.ogg-771186c56b147c4a0e9dacac2009ea7e.oggstr"
+
+[deps]
+
+source_file="res://sound/Air_to_the_Throne.ogg"
+source_md5="df57cce56b418e64a504d1f92eaf52cf"
+
+dest_files=[ "res://.import/Air_to_the_Throne.ogg-771186c56b147c4a0e9dacac2009ea7e.oggstr" ]
+dest_md5="c6e9e09940f12404d25a927f96c12e6f"
+
+[params]
+
+loop=true
+loop_offset=0

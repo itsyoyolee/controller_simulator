@@ -1,11 +1,12 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Script/Staring.gd" type="Script" id=1]
 [ext_resource path="res://Img/未命名-1.jpg" type="Texture" id=2]
 [ext_resource path="res://Img/未命-1.png" type="Texture" id=3]
 [ext_resource path="res://Img/命名-1.png" type="Texture" id=4]
+[ext_resource path="res://sound/Eyes_of_Glory.ogg" type="AudioStream" id=5]
 
-[node name="Starting" type="Node2D"]
+[node name="Starting" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -39,6 +40,14 @@ texture_normal = ExtResource( 3 )
 texture_hover = ExtResource( 4 )
 expand = true
 _sections_unfolded = [ "Size Flags", "Textures", "Visibility" ]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="2"]
+
+stream = ExtResource( 5 )
+volume_db = 0.0
+autoplay = true
+mix_target = 0
+bus = "Master"
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
 

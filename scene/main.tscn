@@ -94,5 +94,13 @@ hframes = 11
 frame = 1
 _sections_unfolded = [ "Animation", "Transform" ]
 
+[node name="audio" type="AudioStreamPlayer" parent="." index="5"]
+
+stream = null
+volume_db = 0.0
+autoplay = true
+mix_target = 0
+bus = "Master"
+
 
 [editable path="Game"]

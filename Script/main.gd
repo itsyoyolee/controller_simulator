@@ -10,6 +10,8 @@ var fail_time				#反應總時間
 var score = 0				#分數(存活時間相關)
 var Button_Num = 10			#按鍵總數
 var survive_time 			#存活時間
+var music
+
 
 func _ready():
 	playing_game = get_node("Game").ChooseGame(false)
@@ -18,6 +20,14 @@ func _ready():
 	fail_time = playing_game.endPoint
 	survive_time = playing_game.endPoint
 	$Anim.play("handMove")
+	randomize()
+	if(randi()%2):
+		music = load("res://sound/Opus_One.ogg")
+		print("load m1")
+	else:
+		music = load("res://sound/The_Angels_Weep.ogg")
+		print("load m2")
+	playMusic()
 	pass
 
 func _process(delta):
@@ -81,4 +91,9 @@ func Game_Over():
 func Init_Btn():
 	for index in Button_Num:
 		button_list.append(get_node("Controller").get_node(str(index)))
+	pass
+	
+func playMusic():
+	$audio.stream = music
+	$audio.playing = true
 	pass
