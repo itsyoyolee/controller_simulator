@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Script/main.gd" type="Script" id=1]
 [ext_resource path="res://scene/controller.tscn" type="PackedScene" id=2]
@@ -6,8 +6,7 @@
 [ext_resource path="res://scene/game.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Img/handmovement.png" type="Texture" id=5]
 [ext_resource path="res://Img/CNS.png" type="Texture" id=6]
-[ext_resource path="res://Img/WQT.png" type="Texture" id=7]
-[ext_resource path="res://Img/NB.png" type="Texture" id=8]
+[ext_resource path="res://Img/NB.png" type="Texture" id=7]
 
 [sub_resource type="Animation" id=1]
 
@@ -69,16 +68,160 @@ tracks/0/keys = {
 [sub_resource type="Animation" id=4]
 
 resource_name = "CNS"
-length = 1.0
+length = 2.0
 loop = false
 step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("HUD2/CNS:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 6 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("HUD2/NB:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 7 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("HUD2/CNS:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 4, 4 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("HUD2/CNS:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 889, 490 ), Vector2( 438, 447 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("HUD2/CNS:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.5 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("HUD2/CNS:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("HUD2/NB:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
 [sub_resource type="Animation" id=5]
 
 resource_name = "NB"
-length = 1.0
+length = 2.0
 loop = false
 step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("HUD2/NB:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("HUD2/CNS:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("HUD2/NB:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 871, 482 ), Vector2( 562, 384 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("HUD2/NB:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 4, 4 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("HUD2/NB:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1.4, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.5 ), Color( 1, 1, 1, 0 ) ]
+}
 
 [sub_resource type="Animation" id=6]
 
@@ -192,27 +335,19 @@ blend_times = [  ]
 [node name="CNS" type="Sprite" parent="HUD2" index="0"]
 
 visible = false
-modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 603.602, 303.465 )
-scale = Vector2( 2.28694, 1.79795 )
+self_modulate = Color( 1, 1, 1, 0.955986 )
+position = Vector2( 859.224, 487.161 )
+scale = Vector2( 0.264095, 0.264095 )
 texture = ExtResource( 6 )
-_sections_unfolded = [ "Transform", "Visibility" ]
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
-[node name="WQT" type="Sprite" parent="HUD2" index="1"]
+[node name="NB" type="Sprite" parent="HUD2" index="1"]
 
 visible = false
-modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 473.044, -11.1315 )
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 562, 384 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 7 )
-_sections_unfolded = [ "Transform", "Visibility" ]
-
-[node name="NB" type="Sprite" parent="HUD2" index="2"]
-
-modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 488.78, 327.828 )
-scale = Vector2( 4, 4 )
-texture = ExtResource( 8 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [connection signal="animation_finished" from="HUD" to="." method="_on_HUD_animation_finished"]

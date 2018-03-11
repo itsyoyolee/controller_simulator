@@ -87,6 +87,7 @@ func Btn_Update(delta):
 
 func Game_Over():
 	if v <= 4:
+		v+=1
 		get_node("HUD").play("Shake")
 		$Anim.play("handBreak")
 		global.score = score
