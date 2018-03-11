@@ -54,6 +54,7 @@ func Move(var delta):
 	# Jumping
 	if on_floor and Input.is_action_just_pressed("ui_up"):
 		linear_vel.y = -JUMP_SPEED
+		$jump.play()
 		new_anim = "jump"
 	pass
 	
@@ -89,6 +90,7 @@ func Anim(var delta):
 			new_anim = "idle"
 	if Input.is_action_just_pressed("ui_select") and attacktime < 1 :
 		attack = true
+		$hitSFX.play()
 	if(attack):
 		new_anim = "attack"
 		attacktime += delta

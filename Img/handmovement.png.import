@@ -10,7 +10,7 @@ source_file="res://Img/handmovement.png"
 source_md5="3c164a95fa6237fd6e6d2afe719dfcf9"
 
 dest_files=[ "res://.import/handmovement.png-98eb9e6ab25a76dfe8224edcf52a0324.stex" ]
-dest_md5="2f98edad1c9f18eb6a63bb654c4765e9"
+dest_md5="e6b5b89779f6cf8045a1f7c3b2d22a77"
 
 [params]
 
@@ -19,11 +19,11 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
-process/fix_alpha_border=true
+process/fix_alpha_border=false
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false

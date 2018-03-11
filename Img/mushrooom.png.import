@@ -10,7 +10,7 @@ source_file="res://Img/mushrooom.png"
 source_md5="2a80706378d3475bf4b1e043c903e53b"
 
 dest_files=[ "res://.import/mushrooom.png-0ed80144028bc6e6e70587c4bb58f043.stex" ]
-dest_md5="2061608211adb0ea9c86740bc1ad8f19"
+dest_md5="130c023ade84ef790442b5c20c7a47d0"
 
 [params]
 
@@ -19,11 +19,11 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
-process/fix_alpha_border=true
+process/fix_alpha_border=false
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false

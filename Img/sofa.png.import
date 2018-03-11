@@ -10,7 +10,7 @@ source_file="res://Img/sofa.png"
 source_md5="992e8a680471afc62700e2d315dd9967"
 
 dest_files=[ "res://.import/sofa.png-36ea81ed9256f5412c78aeb07c893efc.stex" ]
-dest_md5="a55adc9ab55a50746a1e1bf110216b01"
+dest_md5="db268dfe76ddbe7415020a44fccd948e"
 
 [params]
 
@@ -19,11 +19,11 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
-process/fix_alpha_border=true
+process/fix_alpha_border=false
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false

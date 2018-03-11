@@ -1,8 +1,6 @@
 extends Node2D
 
-# class member variables go here, for example: 
-# var a = 2
-# var b = "textvar"
+const BUTTON_OFFSET =7.5
 export var buttonType = "normal"
 var timer = 0
 var enable = false
@@ -22,19 +20,19 @@ func _process(delta):
 		pressDetect()
 		timer += 1
 		if(buttonType=="normal"):
-			$Sprite.offset.y = -10
+			$Sprite.offset.y = -BUTTON_OFFSET
 		elif(buttonType=="mushroom"):
 			if(dir==0):
-				$Sprite.offset.x=-10
+				$Sprite.offset.x=-BUTTON_OFFSET
 				$Sprite.frame=3
 			elif(dir==1):
-				$Sprite.offset.y=10
+				$Sprite.offset.y=BUTTON_OFFSET
 				$Sprite.frame=2
 			elif(dir==2):
-				$Sprite.offset.x=10
+				$Sprite.offset.x=BUTTON_OFFSET
 				$Sprite.frame=1
 			elif(dir==3):
-				$Sprite.offset.y=-10
+				$Sprite.offset.y=-BUTTON_OFFSET
 				$Sprite.frame=4
 		$anim.offset.y = 0
 		$anim.scale *= Vector2(1.1, 1.1)
@@ -57,12 +55,14 @@ func pressDetect(): #是否被小精靈推回去
 	if(buttonType == "normal"):
 		if($area.overlaps_body(get_node("../player/body"))):
 			if(Input.is_action_just_pressed("ui_select")):
+				$SFX.play()
 				enable = false
 				
 	elif(buttonType == "mushroom"):
 		if($area.overlaps_body(get_node("../player/body"))):	
 			var temp = get_node("../player").Catch(dirString[dir])
 			if(temp):
+				$SFX.play()
 				enable = false
 	pass
 
