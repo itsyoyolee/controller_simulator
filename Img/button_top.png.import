@@ -10,7 +10,7 @@ source_file="res://Img/button_top.png"
 source_md5="9f97f8e9f7c1131fd7eebebd6c6dfab7"
 
 dest_files=[ "res://.import/button_top.png-ed0f471be66a11402e1c228ce076157a.stex" ]
-dest_md5="a39f5c864cafcbb81db6cccde2ae9465"
+dest_md5="0a6fb9a76e4fade9a42e62846886b212"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

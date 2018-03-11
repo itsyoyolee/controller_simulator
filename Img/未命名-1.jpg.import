@@ -10,7 +10,7 @@ source_file="res://Img/未命名-1.jpg"
 source_md5="cb5e6c208e1b6723ebe116edc7e782a5"
 
 dest_files=[ "res://.import/未命名-1.jpg-32c3d62d2fce96942107be1a7261f82c.stex" ]
-dest_md5="84bc680d93639b03d810f09476eda71a"
+dest_md5="d5638a2a728cb30c12fbceceae12742b"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

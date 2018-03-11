@@ -10,7 +10,7 @@ source_file="res://Img/Controller Simulator.png"
 source_md5="a7b86f239d9d4116298e8c7ad97a23c4"
 
 dest_files=[ "res://.import/Controller Simulator.png-a9c6de07ca504fb1a328eb416a0bc0c2.stex" ]
-dest_md5="ae46b109d643de6cd8882f2bdf86fd18"
+dest_md5="d5b196c0b53cc594e17d4e311c248d71"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

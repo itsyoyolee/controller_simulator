@@ -10,7 +10,7 @@ source_file="res://Img/darksouls.png"
 source_md5="69e36f50b1e69b36b2d6a9a610417ffb"
 
 dest_files=[ "res://.import/darksouls.png-591f0e99129a936298062840c1e2a751.stex" ]
-dest_md5="69da537897a500d64a911498b303e44f"
+dest_md5="4f88c7725054183f3473a0fc169f3f94"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

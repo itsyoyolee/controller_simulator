@@ -10,7 +10,7 @@ source_file="res://Img/未命-1.png"
 source_md5="69181b3d70ececcf6d6f08146de04bd8"
 
 dest_files=[ "res://.import/未命-1.png-30d296d71b4ec6032742553abff8e66e.stex" ]
-dest_md5="52f16685437d51abcf1c409fbefcfac2"
+dest_md5="05ec158d3791509fd13c72baa39b6624"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

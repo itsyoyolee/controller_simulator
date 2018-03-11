@@ -10,7 +10,7 @@ source_file="res://Img/kof.png"
 source_md5="6c289a925a3c6671f786d4a29647a836"
 
 dest_files=[ "res://.import/kof.png-efe2ec6802b9ac6306528bfcc259777c.stex" ]
-dest_md5="84cb2e5ea0f6bb3c450c44e2f021857d"
+dest_md5="bd6b50134fc7a4a1c2d289e1fea882a0"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

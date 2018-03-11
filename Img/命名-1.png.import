@@ -10,7 +10,7 @@ source_file="res://Img/命名-1.png"
 source_md5="0e0a2c8fec829da9796a19208f396118"
 
 dest_files=[ "res://.import/命名-1.png-1a8fa7487c3920cbb92237a1a6e1d724.stex" ]
-dest_md5="4292ec8de00bf4c0900c24779f08f0a3"
+dest_md5="d537ef0da5e2a07c70f0ccdbd4108e24"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
