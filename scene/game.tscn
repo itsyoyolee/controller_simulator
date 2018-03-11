@@ -1,11 +1,12 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Script/game.gd" type="Script" id=1]
 [ext_resource path="res://Script/darksouls.gd" type="Script" id=2]
 [ext_resource path="res://Img/darksouls.png" type="Texture" id=3]
 [ext_resource path="res://Script/mario.gd" type="Script" id=4]
 [ext_resource path="res://Img/marioAnim.png" type="Texture" id=5]
-[ext_resource path="res://Img/kof.png" type="Texture" id=6]
+[ext_resource path="res://scene/kof.gd" type="Script" id=6]
+[ext_resource path="res://Img/kof.png" type="Texture" id=7]
 
 [sub_resource type="Animation" id=1]
 
@@ -184,7 +185,7 @@ tracks/3/keys = {
 "values": [ false ]
 }
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 script = ExtResource( 1 )
 
@@ -198,11 +199,11 @@ _sections_unfolded = [ "Visibility" ]
 
 texture = ExtResource( 3 )
 hframes = 10
+frame = 7
 _sections_unfolded = [ "Animation" ]
 
 [node name="Game1" type="Node2D" parent="." index="1"]
 
-visible = false
 script = ExtResource( 4 )
 _sections_unfolded = [ "Visibility" ]
 
@@ -211,19 +212,21 @@ _sections_unfolded = [ "Visibility" ]
 position = Vector2( 0.237831, -0.237823 )
 texture = ExtResource( 5 )
 hframes = 9
+frame = 3
 _sections_unfolded = [ "Animation" ]
 
 [node name="Game2" type="Node2D" parent="." index="2"]
 
-script = ExtResource( 4 )
+visible = false
+script = ExtResource( 6 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="Sprite" type="Sprite" parent="Game2" index="0"]
 
 position = Vector2( 0.237831, -0.237823 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 hframes = 9
-frame = 8
+frame = 1
 _sections_unfolded = [ "Animation" ]
 
 [node name="Anim" type="AnimationPlayer" parent="." index="3"]

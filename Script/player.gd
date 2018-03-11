@@ -72,17 +72,17 @@ func Anim(var delta):
 	new_anim = "idle"
 	if on_floor:
 		if linear_vel.x < -SIDING_CHANGE_SPEED:
-			$body/Sprite.scale.x = 1
+			$body/Sprite.scale.x = 2
 			new_anim = "walk"
 
 		if linear_vel.x > SIDING_CHANGE_SPEED:
-			$body/Sprite.scale.x = -1
+			$body/Sprite.scale.x = -2
 			new_anim = "walk"
 	else:
 		if Input.is_action_pressed("ui_left") and not Input.is_action_pressed("ui_right"):
-			$body/Sprite.scale.x = 1
+			$body/Sprite.scale.x = 2
 		if Input.is_action_pressed("ui_right") and not Input.is_action_pressed("ui_left"):
-			$body/Sprite.scale.x = -1
+			$body/Sprite.scale.x = -2
 
 		if linear_vel.y != 0:
 			new_anim = "jump"

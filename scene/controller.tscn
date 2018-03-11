@@ -164,7 +164,7 @@ hframes = 5
 [node name="6" parent="." index="7" instance=ExtResource( 3 )]
 
 editor/display_folded = true
-position = Vector2( 460.867, 213.485 )
+position = Vector2( 459.759, 214.593 )
 scale = Vector2( 2.47746, 2.44104 )
 
 [node name="anim" parent="6" index="1"]

@@ -102,7 +102,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 5 ]
 }
 
-[node name="player" type="Node2D"]
+[node name="player" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -123,12 +123,13 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="body" index="1"]
 
+position = Vector2( 2.43837, -23.8961 )
+scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
 hframes = 15
-_sections_unfolded = [ "Animation", "Region" ]
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 __meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
+"_edit_group_": true
 }
 
 [node name="Anim" type="AnimationPlayer" parent="body" index="2"]

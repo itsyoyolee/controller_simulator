@@ -5,6 +5,7 @@ var playingGame = "NULL"
 var preGame = "NULL"
 
 func _ready():
+	randomize()
 	#add all game int scene to gameList
 	for index in (get_child_count()-1) :
 		gameList.append(get_node("Game"+str(index)))
@@ -14,11 +15,12 @@ func _ready():
 
 
 func ChooseGame(var isSuccessful):
+	randomize()
 	if(isSuccessful):
 		playingGame.Update()
-	preGame=playingGame
+	preGame = playingGame
 	playingGame = gameList[randi()%gameList.size()]
-	while preGame==playingGame:
+	while preGame == playingGame:
 		playingGame = gameList[randi()%gameList.size()]
 	return playingGame
 	pass
