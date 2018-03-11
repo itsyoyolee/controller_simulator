@@ -43,7 +43,7 @@ extents = Vector2( 4.74378, 18.6514 )
 custom_solver_bias = 0.0
 extents = Vector2( 3.66998, 20.1338 )
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -297,6 +297,11 @@ shape = SubResource( 6 )
 position = Vector2( 0.0626259, 26.2831 )
 build_mode = 1
 polygon = PoolVector2Array( 3.44392, -183.213, 16.2134, -35.124, 38.5138, -42.9712, 39.1413, -470.973, 43.0112, 179.261, -40.2786, 189.17, -35.9542, -558.768, -35.0129, -160.946, -21.5208, -108.818, -17.128, -73.1508, -5.27296, -191.936 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="RigidBody2D" index="7"]
+
+build_mode = 1
+polygon = PoolVector2Array( 36.0437, -476.575, 31.9363, -828.539, 22.1722, -1098.79, 0.952442, -943.497, -25.3774, -1081.53, -32.8761, -780.136, -34.8803, -525.215, -40.7906, -528.255, -31.0559, -1358.17, -9.5006, -1336.89, 32.683, -1318.65, 40.6793, -479.615 )
 
 [node name="player" parent="." index="12" instance=ExtResource( 12 )]
 
