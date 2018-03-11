@@ -10,7 +10,11 @@ source_file="res://Img/mushrooom.png"
 source_md5="2a80706378d3475bf4b1e043c903e53b"
 
 dest_files=[ "res://.import/mushrooom.png-0ed80144028bc6e6e70587c4bb58f043.stex" ]
+<<<<<<< HEAD
+dest_md5="9a78b4100a554cc451f37a0f507aa01e"
+=======
 dest_md5="130c023ade84ef790442b5c20c7a47d0"
+>>>>>>> 67ded1622d655a331df34afa652012bdb6967468
 
 [params]
 

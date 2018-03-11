@@ -10,7 +10,11 @@ source_file="res://Img/jump.png"
 source_md5="6230e26195ad2b2e236c2e321ae5b809"
 
 dest_files=[ "res://.import/jump.png-6579a0779ec42d9f5679a69da825ef3f.stex" ]
+<<<<<<< HEAD
+dest_md5="eae2d6e3519608906ff611d58d319d21"
+=======
 dest_md5="583f42dc089b9c54085acd20b321bba2"
+>>>>>>> 67ded1622d655a331df34afa652012bdb6967468
 
 [params]
 

@@ -10,7 +10,11 @@ source_file="res://Img/未命-1.png"
 source_md5="69181b3d70ececcf6d6f08146de04bd8"
 
 dest_files=[ "res://.import/未命-1.png-30d296d71b4ec6032742553abff8e66e.stex" ]
+<<<<<<< HEAD
+dest_md5="05ec158d3791509fd13c72baa39b6624"
+=======
 dest_md5="4c19af6573b61c135c6bfb7f6d11abdf"
+>>>>>>> 67ded1622d655a331df34afa652012bdb6967468
 
 [params]
 

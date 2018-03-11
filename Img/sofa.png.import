@@ -10,7 +10,11 @@ source_file="res://Img/sofa.png"
 source_md5="992e8a680471afc62700e2d315dd9967"
 
 dest_files=[ "res://.import/sofa.png-36ea81ed9256f5412c78aeb07c893efc.stex" ]
+<<<<<<< HEAD
+dest_md5="6c0a27c0c8bb62f52d7dcb6a6f01fa74"
+=======
 dest_md5="db268dfe76ddbe7415020a44fccd948e"
+>>>>>>> 67ded1622d655a331df34afa652012bdb6967468
 
 [params]
 

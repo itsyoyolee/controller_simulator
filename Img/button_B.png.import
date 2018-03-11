@@ -10,7 +10,11 @@ source_file="res://Img/button_B.png"
 source_md5="8e22255d63665d013113b6bdd7a70520"
 
 dest_files=[ "res://.import/button_B.png-df8a5c5e405f8cb708ad8f8248e48b93.stex" ]
+<<<<<<< HEAD
+dest_md5="31aa2f58ca176ff029d37db69a49441e"
+=======
 dest_md5="ec4cbe132a6e08d77b5dc6352b6e34cc"
+>>>>>>> 67ded1622d655a331df34afa652012bdb6967468
 
 [params]
 
