@@ -10,7 +10,11 @@ source_file="res://Img/ending.png"
 source_md5="d09e7e2113a3bc25036083a509204d10"
 
 dest_files=[ "res://.import/ending.png-3ed0fd884bb6476e0f090f7f9daa2864.stex" ]
+<<<<<<< HEAD
 dest_md5="b399ae813fefa08e519006f4994c8fed"
+=======
+dest_md5="208b28c74c38fe93e2d150bdb5585649"
+>>>>>>> b921d2d60affde2afab8c59c531e2a22dc68705a
 
 [params]
 
@@ -19,7 +23,11 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
+<<<<<<< HEAD
 flags/filter=true
+=======
+flags/filter=false
+>>>>>>> b921d2d60affde2afab8c59c531e2a22dc68705a
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
