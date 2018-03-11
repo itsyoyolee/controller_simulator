@@ -34,6 +34,7 @@ func _process(delta):
 			#如果按鈕沒點擊count fail_time
 			Btn_Update(delta)
 		else:# GAME CHANGE!
+			controller_health -= 50
 			playing_game = get_node("Game").ChooseGame(false)
 			fail_time = playing_game.endPoint
 			playing_game.get_node("../Anim").play(playing_game.anim)
