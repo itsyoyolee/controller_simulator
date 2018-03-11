@@ -16,7 +16,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 29.4019, 106.414 )
+extents = Vector2( 17.5964, 81.4861 )
 
 [sub_resource type="RectangleShape2D" id=2]
 
@@ -58,6 +58,7 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="0" parent="." index="1" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 position = Vector2( 207.246, 154.493 )
 scale = Vector2( 2.91256, 2.91256 )
 buttonType = "mushroom"
@@ -72,6 +73,7 @@ hframes = 5
 
 [node name="1" parent="." index="2" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 position = Vector2( 177.802, 307.204 )
 scale = Vector2( 2.34775, 1.07274 )
 
@@ -90,6 +92,7 @@ texture = ExtResource( 4 )
 
 [node name="2" parent="." index="3" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 position = Vector2( 284.79, 232.376 )
 scale = Vector2( 1.19713, 2.13538 )
 
@@ -108,6 +111,7 @@ texture = ExtResource( 5 )
 
 [node name="3" parent="." index="4" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 position = Vector2( 371.176, 280.909 )
 scale = Vector2( 2.34775, 1.07274 )
 
@@ -126,6 +130,7 @@ texture = ExtResource( 6 )
 
 [node name="4" parent="." index="5" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 position = Vector2( 286.564, 365.399 )
 scale = Vector2( 1.19713, 2.13538 )
 
@@ -144,6 +149,7 @@ texture = ExtResource( 7 )
 
 [node name="5" parent="." index="6" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 position = Vector2( 652.386, 384.813 )
 scale = Vector2( 2.91256, 2.91256 )
 buttonType = "mushroom"
@@ -158,6 +164,7 @@ hframes = 5
 
 [node name="6" parent="." index="7" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 position = Vector2( 460.867, 213.485 )
 scale = Vector2( 2.47746, 2.44104 )
 
@@ -176,6 +183,7 @@ texture = ExtResource( 8 )
 
 [node name="7" parent="." index="8" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 position = Vector2( 551.708, 148.532 )
 scale = Vector2( 2.47746, 2.44104 )
 
@@ -194,6 +202,7 @@ texture = ExtResource( 9 )
 
 [node name="8" parent="." index="9" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 position = Vector2( 633.066, 213.701 )
 scale = Vector2( 2.47746, 2.44104 )
 
@@ -212,6 +221,7 @@ texture = ExtResource( 10 )
 
 [node name="9" parent="." index="10" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 position = Vector2( 563.157, 311.834 )
 scale = Vector2( 2.47746, 2.44104 )
 
@@ -230,6 +240,7 @@ texture = ExtResource( 11 )
 
 [node name="RigidBody2D" type="RigidBody2D" parent="." index="11"]
 
+editor/display_folded = true
 position = Vector2( 389.979, 449.767 )
 scale = Vector2( 8.62894, 0.328947 )
 input_pickable = false
@@ -253,7 +264,7 @@ angular_damp = -1.0
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="RigidBody2D" index="0"]
 
-position = Vector2( -24.4234, -201.331 )
+position = Vector2( -24.9463, -204.075 )
 scale = Vector2( 0.1804, 1 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -287,7 +298,7 @@ shape = SubResource( 6 )
 
 position = Vector2( 0.0626259, 26.2831 )
 build_mode = 1
-polygon = PoolVector2Array( 3.44392, -183.213, 16.2134, -35.124, 35.6582, -49.7847, 38.6535, -159.492, 38.9926, 145.91, -40.2786, 189.17, -38.7757, -221.504, -35.0183, -159.082, -27.0654, -96.6592, -17.9852, -45.7355, -5.27296, -191.936 )
+polygon = PoolVector2Array( 3.44392, -183.213, 16.2134, -35.124, 38.5138, -42.9712, 39.1413, -470.973, 43.0112, 179.261, -40.2786, 189.17, -35.9542, -558.768, -35.0129, -160.946, -21.5208, -108.818, -17.128, -73.1508, -5.27296, -191.936 )
 
 [node name="player" parent="." index="12" instance=ExtResource( 12 )]
 

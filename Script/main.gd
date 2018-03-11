@@ -17,9 +17,11 @@ func _ready():
 	Init_Btn()
 	fail_time = playing_game.endPoint
 	survive_time = playing_game.endPoint
+	$Anim.play("handMove")
 	pass
 
 func _process(delta):
+	
 	if (controller_health >= 0):
 		score+=delta
 		if (survive_time >= 0):# 計算存活

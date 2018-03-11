@@ -1,7 +1,7 @@
 extends Node2D
 const GRAVITY_VEC = Vector2(0, 900)
 const FLOOR_NORMAL = Vector2(0, -1)
-const SLOPE_SLIDE_STOP = 0.0
+const SLOPE_SLIDE_STOP = 5.0
 const MIN_ONAIR_TIME = 0.1
 const WALK_SPEED = 200 # pixels/sec
 const JUMP_SPEED = 450

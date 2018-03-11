@@ -1,9 +1,29 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Script/main.gd" type="Script" id=1]
 [ext_resource path="res://scene/controller.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Img/screen.png" type="Texture" id=3]
 [ext_resource path="res://scene/game.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Img/handmovement.png" type="Texture" id=5]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "handMove"
+length = 0.4
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
 
 [node name="main" type="Node2D" index="0"]
 
@@ -69,6 +89,25 @@ _sections_unfolded = [ "Transform" ]
 [node name="Sprite" parent="Game/Game1" index="0"]
 
 frame = 0
+
+[node name="Anim" type="AnimationPlayer" parent="." index="4"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/handMove = SubResource( 1 )
+blend_times = [  ]
+_sections_unfolded = [ "Playback Options" ]
+
+[node name="Sprite" type="Sprite" parent="." index="5"]
+
+position = Vector2( 911.384, 494.761 )
+scale = Vector2( 1.75566, 1.75566 )
+texture = ExtResource( 5 )
+hframes = 4
+_sections_unfolded = [ "Animation" ]
 
 
 [editable path="Game"]
